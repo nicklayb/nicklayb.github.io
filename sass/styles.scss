@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-100;
+}
+
+@layer components {
+  .tag {
+    @apply font-bold bg-purple-700 text-sm border-b-2 border-b-purple-900 text-white px-1.5 pt-0.5 rounded-md;
+  }
+
+  .nav-item {
+    @apply flex flex-initial py-4 px-4 text-purple-800 border-b-2 border-b-transparent hover:border-b-purple-700;
+  }
+
+  .handle {
+    @apply font-bold text-purple-700;
+  }
+}

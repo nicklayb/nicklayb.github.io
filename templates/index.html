@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="flex flex-1 flex-col justify-center">
+  <h2 class="text-5xl font-extrabold mb-6">Hi, my name is <span class="text-purple-800">Nicolas Boisvert</span></h2>
+  <h3 class="text-3xl mb-6">I am a software developer <a class="font-semibold text-purple-600" href="https://thescore.com">@theScore</a> and a functional programming adept</h3>
+  <div>
+    <div class="flex flex-row flex-1 mb-3">
+      <div class="flex-initial mr-2">Currently having fun with</div>
+      <div class="flex-initial">
+        {% for language in config.extra.fun %}
+        <span class="tag">{{language}}</span>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="flex flex-row flex-1">
+      <div class="flex-initial mr-2">Has knowledge with</div>
+      <div class="flex-initial">
+        {% for language in config.extra.knowledge %}
+        <span class="tag">{{language}}</span>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
