@@ -10,13 +10,15 @@
     <nav class="container flex flex-initial mb-4 text-lg">
       <div class="flex flex-1">
         <span class="flex flex-initial py-4 pr-4 font-bold">{{ config.extra.name }}</span>
-        <a class="nav-item" href="/">Home</a>
-        <a class="nav-item" href="/blog">Blog</a>
-        <a class="nav-item" href="/talks">Talks</a>
-        <a class="nav-item" href="/sandbox">Sandbox</a>
+        {% for item in config.extra.nav %}
+        {{current_path}}
+        <a class="nav-item {%if current_path == item.link%}border-b-purple-800{%endif%}" href="{{item.link}}">{{item.name}}</a>
+        {% endfor %}
       </div>
       <div class="flex-initial">
-        <a class="nav-item" href="https://github.com/{{ config.extra.github_handle }}">GitHub</a>
+        {% for item in config.extra.handles %}
+          <a class="nav-item" href="{{item.link}}">{{item.name}}</a>
+        {% endfor %}
       </div>
     </nav>
     <section class="flex flex-1 container">

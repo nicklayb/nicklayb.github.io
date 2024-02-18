@@ -1,5 +1,5 @@
-.PHONY: serve
-serve:
+.PHONY: dev
+dev:
 	zola serve
 
 .PHONY: watch-css

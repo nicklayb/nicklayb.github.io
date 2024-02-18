@@ -13,9 +13,17 @@ build_search_index = false
 highlight_code = true
 
 [extra]
-github_handle = "nicklayb"
 name = "Nicolas Boisvert"
 fun = ["Rust", "Haskell"]
 knowledge = ["Elixir", "Elm", "Javascript", "Typescript", "C#", "Java", "PHP"]
 job_name = "theScore"
 job_link = "https://thescore.com"
+nav = [
+  { name = "Home", link = "/" },
+  { name = "Blog", link = "/blog" },
+  { name = "Talks", link = "/talks" },
+  { name = "Sandbox", link = "/sandbox" },
+]
+handles = [
+  { name = "GitHub", link = "https://github.com/nicklayb" },
+]
