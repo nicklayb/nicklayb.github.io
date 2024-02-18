@@ -8,13 +8,13 @@
   <p>{{section.description}}</p>
 
   <div class="w-full">
-    {% for page in section.pages %}
+    {% for page in section.extra.talks %}
     <div class="w-full mt-8">
       <h3 class="text-3xl mb-2">{{page.title}}</h3>
       <div class="flex justify-between">
-        <a class="handle" href="{{page.extra.location.url}}">@{{page.extra.location.name}}</a>
+        <a class="handle" href="{{page.location.url}}">@{{page.location.name}}</a>
         <div class="">
-          {% for tag in page.extra.tags %}
+          {% for tag in page.tags %}
             <span class="tag">{{tag}}</span>
           {% endfor %}
         </div>
@@ -23,7 +23,7 @@
         <iframe
           width="100%"
           height="500"
-          src="https://www.youtube.com/embed/{{page.extra.video_code}}"
+          src="https://www.youtube.com/embed/{{page.video_code}}"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
         ></iframe>

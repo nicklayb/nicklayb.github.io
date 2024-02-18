@@ -20,9 +20,9 @@ job_name = "theScore"
 job_link = "https://thescore.com"
 nav = [
   { name = "Home", link = "/" },
-  { name = "Blog", link = "/blog" },
-  { name = "Talks", link = "/talks" },
-  { name = "Sandbox", link = "/sandbox" },
+  { name = "Blog", link = "/blog/" },
+  { name = "Talks", link = "/talks/" },
+  { name = "Sandbox", link = "/sandbox/" },
 ]
 handles = [
   { name = "GitHub", link = "https://github.com/nicklayb" },

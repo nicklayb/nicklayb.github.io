@@ -11,7 +11,6 @@
       <div class="flex flex-1">
         <span class="flex flex-initial py-4 pr-4 font-bold">{{ config.extra.name }}</span>
         {% for item in config.extra.nav %}
-        {{current_path}}
         <a class="nav-item {%if current_path == item.link%}border-b-purple-800{%endif%}" href="{{item.link}}">{{item.name}}</a>
         {% endfor %}
       </div>

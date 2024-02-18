@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="w-full">
+  <h1 class="text-4xl font-extrabold mb-6">{{section.title}}</h1>
+
+  <p>{{section.description}}</p>
+
+  <div class="w-full mt-4">
+    {% for page in section.extra.sandbox %}
+    <div class="flex mt-8 border-b-2 border-b-neutral-200 pb-4">
+      <div class="flex-initial max-w-80">
+        <img class="border-2 border-purple-800 rounded-md drop-shadow-md" src="{{page.image}}">
+      </div>
+      <div class="flex flex-col flex-1 pl-4">
+        <div class="flex w-full justify-between">
+          <h3 class="flex-initial text-3xl mb-2">{{page.title}}</h3>
+          <div class="flex-initial">
+            {% for tag in page.tags %}
+              <span class="tag">{{tag}}</span>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="flex-1">
+          {{page.description}}
+        </div>
+        <div class="text-right pb-4">
+          {% for link in page.links %}
+            <a class="text-purple-800 font-semibold px-4" href="{{link.link}}">{{link.name}}</a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock content %}
