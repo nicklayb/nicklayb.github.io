@@ -11,5 +11,7 @@ jobs:
       - name: build_and_deploy
         uses: shalzz/zola-deploy-action@v0.17.2
         env:
+          ENV: prod
+          GA_ANALYTICS_ID: UA-96129438-1
           PAGES_BRANCH: gh-pages
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
