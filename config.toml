@@ -27,3 +27,4 @@ nav = [
 handles = [
   { name = "GitHub", link = "https://github.com/nicklayb" },
 ]
+email = "nicolas@nboisvert.com"

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="w-full">
+  <h1 class="text-4xl font-extrabold mb-6">{{section.title}}</h1>
+
+  <p>{{section.description}}</p>
+
+  <div class="w-full">
+    {% for page in section.pages %}
+      <div class="w-full mt-12">
+        <div class="flex w-full justify-between items-center">
+          <h3 class="flex-initial text-3xl mb-2">{{page.title}}</h3>
+          <div class="flex-initial">
+            {% for tag in page.extra.tags %}
+              <span class="tag">{{tag}}</span>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="pt-4">
+          <span class="text-neutral-500 text-xs">{{page.date}}</span>
+          <p class="my-2">{{page.description}}...</p>
+          <a class="text-purple-800 font-semibold mt-2" href="{{page.path}}">Read more</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock content %}

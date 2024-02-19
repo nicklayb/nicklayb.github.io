@@ -15,7 +15,69 @@ body {
     @apply flex flex-initial py-4 px-4 text-purple-800 border-b-2 border-b-transparent hover:border-b-purple-700;
   }
 
+  .footer-nav-item {
+    @apply flex-initial py-1 text-slate-500;
+  }
+
+  a.footer-nav-item {
+    @apply hover:text-purple-700;
+  }
+
   .handle {
     @apply font-bold text-purple-700;
+  }
+
+  .markdown {
+    h2 {
+      @apply text-3xl font-bold mb-4;
+    }
+
+    h3 {
+      @apply text-2xl font-semibold mb-4;
+    }
+
+    h4 {
+      @apply text-xl font-semibold mb-4;
+    }
+
+    a {
+      @apply font-semibold text-purple-700;
+    }
+
+    p {
+      @apply my-4 text-justify;
+    }
+
+    ul {
+      @apply ml-6 list-disc;
+    }
+
+    li {
+      @apply py-1;
+    }
+
+    blockquote p {
+      @apply border-l-4 border-l-neutral-300 px-4 py-4 text-lg;
+    }
+
+    .side-by-side {
+      @apply flex;
+
+      .image {
+        @apply flex m-6 w-3/6;
+      }
+    }
+
+    .image {
+      @apply flex m-6;
+    }
+
+    img {
+      @apply border-4 border-neutral-100 drop-shadow-lg;
+    }
+
+    figcaption {
+      @apply font-mono text-neutral-600 font-normal text-xs;
+    }
   }
 }

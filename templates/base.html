@@ -23,5 +23,28 @@
     <section class="flex flex-1 container">
       {% block content %} {% endblock %}
     </section>
+    <footer class="py-6 bg-slate-200 mt-6">
+      <div class="container flex justify-evenly">
+        <div class="flex flex-initial items-center flex-col">
+          {% for item in config.extra.nav %}
+          <a class="footer-nav-item {%if current_path == item.link%}border-b-purple-800{%endif%}" href="{{item.link}}">{{item.name}}</a>
+          {% endfor %}
+        </div>
+        <div class="flex flex-initial items-center flex-col">
+          {% for item in config.extra.handles %}
+          <a class="footer-nav-item {%if current_path == item.link%}border-b-purple-800{%endif%}" href="{{item.link}}">{{item.name}}</a>
+          {% endfor %}
+          <a class="footer-nav-item" href="mailto:{{config.extra.email}}">{{config.extra.email}}</a>
+          <span class="footer-nav-item">Shawinigan, QC, Canada</span>
+          <span class="footer-nav-item">Coding with ❤️</span>
+        </div>
+        <div class="flex flex-initial items-center flex-col">
+          <span class="footer-nav-item">Built with</span>
+          <a class="footer-nav-item" href="https://www.getzola.org/">Zola</a>
+          <a class="footer-nav-item" href="https://tailwindcss.com/">TailwindCSS</a>
+          <a class="footer-nav-item" href="https://github.com/nicklayb">Source</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
