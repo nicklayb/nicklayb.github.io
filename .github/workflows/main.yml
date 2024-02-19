@@ -5,7 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pull-requests: write
+      pages: write
+      id-token: write
     if: github.ref == 'refs/heads/master'
     steps:
       - name: checkout
