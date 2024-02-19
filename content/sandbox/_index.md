@@ -7,7 +7,7 @@ template = "sandbox.html"
 title = "Chord Sheet"
 tags = ["elm", "chord", "music" ,"sheet"]
 description = """
-Chord sheet
+I looked around the web to find a piano chord sheet that had all the keys and most common chords but couldn't find anything that fitted a A4 type paper. All I could find was poster (and quite expensive one). So I figure I'd get a shot at creating a generator that allows me to put what I want and how I want it. Interesting bit of the generator is that the chords are not hardcoded, they are generated according to music theory (at least my understanding of it).
 """
 image = "chord_sheet.png"
 
