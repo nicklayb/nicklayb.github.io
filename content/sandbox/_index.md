@@ -43,10 +43,6 @@ image = "kub.png"
 name = "Demo"
 link = "https://nicklayb.github.io/kub"
 
-[[extra.sandbox.links]]
-name = "Source"
-link = "https://github.com/nicklayb/kub"
-
 [[extra.sandbox]]
 title = "Labyrelm"
 tags = ["elm", "game", "labyrinth", "prim"]
