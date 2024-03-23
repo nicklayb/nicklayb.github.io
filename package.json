@@ -6,7 +6,8 @@
   "scripts": {
     "build": "NODE_ENV=production npx tailwindcss -i styles/styles.css -o static/styles/styles.css",
     "dev": "zola serve",
-    "css:watch": "npx tailwindcss -w -i sass/styles.scss -o static/styles/styles.css"
+    "css:watch": "npx tailwindcss -w -i sass/styles.scss -o static/styles/styles.css",
+    "css:build": "npx tailwindcss --minify -i sass/styles.scss -o static/styles/styles.css"
   },
   "author": "",
   "license": "ISC",
