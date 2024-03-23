@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>{{ config.extra.name }}</title>
     <link rel="stylesheet" href="{{ get_url(path="styles/styles.css") | safe }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% if get_env(name="ENV",default="dev") == "prod" %}
     <script async src="https://www.googletagmanager.com/gtag/js?id={{get_env(name="GA_ANALYTICS_ID")}}"></script>
     <script>
@@ -18,37 +19,49 @@
 
   <body class="h-screen flex flex-col">
     <nav class="container flex flex-initial mb-4 text-lg">
-      <div class="flex flex-1">
-        <span class="flex flex-initial py-4 pr-4 font-bold">{{ config.extra.name }}</span>
-        {% for item in config.extra.nav %}
-        <a class="nav-item {%if current_path == item.link%}border-b-purple-800{%endif%}" href="{{item.link}}">{{item.name}}</a>
-        {% endfor %}
-      </div>
-      <div class="flex-initial">
-        {% for item in config.extra.handles %}
-          <a class="nav-item" href="{{item.link}}">{{item.name}}</a>
-        {% endfor %}
+      <div class="flex flex-1 flex-col desktop:flex-row">
+        <div class="flex justify-between">
+          <span class="py-4 px-4 desktop:pl-0 font-bold">{{ config.extra.name }}</span>
+          <label for="hamburger" tabindex="0" class="flex desktop:hidden px-4 items-center" onclick="toggleMenu()">
+            <span class="hamburger">
+              <svg width="20px" height="20px" viewBox="0 0 12 12" enable-background="new 0 0 12 12" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g> <rect fill="#1D1D1B" height="1" width="11" x="0.5" y="5.5"/> <rect fill="#1D1D1B" height="1" width="11" x="0.5" y="2.5"/> <rect fill="#1D1D1B" height="1" width="11" x="0.5" y="8.5"/></g></svg>
+            </span>
+          </label>
+        </div>
+        <input class="hidden" type="checkbox" name="hamburger">
+        <div class="flex flex-1 flex-col desktop:flex-row desktop:justify-between" id="menu">
+          <div class="flex flex-initial flex-col desktop:flex-row">
+            {% for item in config.extra.nav %}
+            <a class="nav-item {%if current_path == item.link%}active{%endif%}" href="{{item.link}}">{{item.name}}</a>
+            {% endfor %}
+          </div>
+          <div class="flex-initial flex-col desktop:flex-row">
+            {% for item in config.extra.handles %}
+              <a class="nav-item" href="{{item.link}}">{{item.name}}</a>
+            {% endfor %}
+          </div>
+        </div>
       </div>
     </nav>
-    <section class="flex flex-1 container">
+    <section class="flex flex-1 container px-2 desktop:px-0">
       {% block content %} {% endblock %}
     </section>
-    <footer class="py-6 bg-slate-200 mt-6">
-      <div class="container flex justify-evenly">
-        <div class="flex flex-initial items-center flex-col">
+    <footer class="py-4 desktop:py-6 bg-slate-200 mt-4 desktop:mt-6">
+      <div class="container flex flex-col desktop:flex-row justify-evenly">
+        <div class="flex flex-initial justify-evenly desktop:justify-start desktop:items-center flex-row desktop:flex-col">
           {% for item in config.extra.nav %}
           <a class="footer-nav-item {%if current_path == item.link%}border-b-purple-800{%endif%}" href="{{item.link}}">{{item.name}}</a>
           {% endfor %}
         </div>
-        <div class="flex flex-initial items-center flex-col">
+        <div class="flex flex-initial justify-evenly desktop:justify-start items-center text-xs desktop:text-sm flex-row desktop:flex-col">
           {% for item in config.extra.handles %}
           <a class="footer-nav-item {%if current_path == item.link%}border-b-purple-800{%endif%}" href="{{item.link}}">{{item.name}}</a>
           {% endfor %}
           <a class="footer-nav-item" href="mailto:{{config.extra.email}}">{{config.extra.email}}</a>
-          <span class="footer-nav-item">Shawinigan, QC, Canada</span>
-          <span class="footer-nav-item">Coding with ❤️</span>
+          <span class="hidden desktop:block footer-nav-item">Shawinigan, QC, Canada</span>
+          <span class="hidden desktop:block footer-nav-item">Coding with ❤️</span>
         </div>
-        <div class="flex flex-initial items-center flex-col">
+        <div class="flex flex-initial justify-evenly desktop:justify-start desktop:items-center text-xs desktop:text-sm flex-row desktop:flex-col">
           <span class="footer-nav-item">Built with</span>
           <a class="footer-nav-item" href="https://www.getzola.org/">Zola</a>
           <a class="footer-nav-item" href="https://tailwindcss.com/">TailwindCSS</a>
@@ -57,4 +70,10 @@
       </div>
     </footer>
   </body>
+  <script type="text/javascript">
+    function toggleMenu() {
+      const hamburger = document.querySelector('input[name="hamburger"]')
+      hamburger.checked = !hamburger.checked
+    }
+  </script>
 </html>

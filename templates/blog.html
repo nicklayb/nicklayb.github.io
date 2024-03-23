@@ -9,9 +9,9 @@
 
   <div class="w-full">
     {% for page in section.pages %}
-      <div class="w-full mt-12">
-        <div class="flex w-full justify-between items-center">
-          <h3 class="flex-initial text-3xl mb-2">{{page.title}}</h3>
+      <div class="w-full mt-8 desktop:mt-12">
+        <div class="flex flex-col desktop:flex-row w-full justify-between items-start desktop:items-center">
+          <h3 class="flex-initial text-2xl desktop:text-3xl mb-2">{{page.title}}</h3>
           <div class="flex-initial">
             {% for tag in page.extra.tags %}
               <span class="tag">{{tag}}</span>

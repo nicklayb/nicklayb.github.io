@@ -5,7 +5,7 @@ module.exports = {
       center: true
     },
     screens: {
-      'desktop': '1024px',
+      'desktop': '1024px'
     }
   },
   variants: {},
