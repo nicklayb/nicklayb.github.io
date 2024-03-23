@@ -12,7 +12,11 @@ body {
   }
 
   .nav-item {
-    @apply flex flex-initial py-4 px-4 text-purple-800 border-b-2 border-b-transparent hover:border-b-purple-700;
+    @apply flex flex-initial py-4 px-4 text-purple-800 hover:bg-purple-200 desktop:bg-transparent desktop:hover:bg-transparent desktop:border-b-2 desktop:border-b-transparent desktop:hover:border-b-purple-700;
+
+    &.active {
+      @apply bg-purple-700 text-slate-100 desktop:bg-transparent desktop:text-purple-800 desktop:border-b-purple-800
+    }
   }
 
   .footer-nav-item {
@@ -79,5 +83,11 @@ body {
     figcaption {
       @apply font-mono text-neutral-600 font-normal text-xs;
     }
+  }
+}
+
+@media (max-width: 1024px) {
+  input[type="checkbox"]:not(:checked)+#menu {
+    display: none;
   }
 }

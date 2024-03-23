@@ -1,6 +1,6 @@
 .PHONY: dev
 dev:
-	zola serve
+	zola serve --interface 0.0.0.0
 
 .PHONY: watch-css
 watch-css:
