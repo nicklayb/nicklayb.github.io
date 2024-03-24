@@ -1,14 +1,11 @@
 +++
 title = "The best coding experience I ever had"
-description = """
-I can't really tell in which mood I am. To be honest it's like being in trance for the last 3 days. I woke up wanting to code on my project, I ate thinking about how I want things to be and I fell asleep reasoning on how I will implement my features the next day. I never felt this way about developing apps and I think I finally discovered why. I'm using great tools.
-"""
 
 [extra]
 tags = ["phoenix", "elixir", "liveview"]
 +++
 I can't really tell in which mood I am. To be honest it's like being in trance for the last 3 days. I woke up wanting to code on my project, I ate thinking about how I want things to be and I fell asleep reasoning on how I will implement my features the next day. I never felt this way about developing apps and I think I finally discovered why. I'm using great tools.
-
+<!-- more -->
 ## Being as productive as possible 🔥
 
 At the office, I was selected to kickstart our new product that uses text messages. Fair enough, I never did this before but with the tools that exist today, it shouldn't be that hard. They trusted me on the tool selection for the app, and that may have been a game changer. I started by asking myself: "What slows me down while developing?" and I came up with the following remarks:

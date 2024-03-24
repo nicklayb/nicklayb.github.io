@@ -1,10 +1,5 @@
 +++
 title = "So I built a smart mirror using Elixir"
-description = """
-A couple of years ago I heard about this thing called a "Smart Mirror". Lots of geeks online were building those by putting a PC monitor in a frame, setting up MagicMirror on a Pi, and voilà. I found the project interesting but my lack of "money" kept me back.
-
-Now I don't have that much more money, but I do have a monitor that I won't be using anymore, a Raspberry Pi, and a father that is used to woodworking.
-"""
 
 [extra]
 tags = ["phoenix", "elixir", "liveview", "smart", "mirror"]
@@ -12,6 +7,7 @@ tags = ["phoenix", "elixir", "liveview", "smart", "mirror"]
 A couple of years ago I heard about this thing called a "Smart Mirror". Lots of geeks online were building those by putting a PC monitor in a frame, setting up MagicMirror on a Pi, and voilà. I found the project interesting but my lack of "money" kept me back.
 
 Now I don't have that much more money, but I do have a monitor that I won't be using anymore, a Raspberry Pi, and a father that is used to woodworking.
+<!-- more -->
 
 ## Sketching up
 

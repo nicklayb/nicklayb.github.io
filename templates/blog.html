@@ -5,7 +5,7 @@
 <div class="w-full">
   <h1 class="text-4xl font-extrabold mb-6">{{section.title}}</h1>
 
-  <p>{{section.description}}</p>
+  <p class="text-center py-2 text-slate-400">{{section.description}}</p>
 
   <div class="w-full">
     {% for page in section.pages %}
@@ -20,8 +20,8 @@
         </div>
         <div class="pt-4">
           <span class="text-neutral-500 dark:text-neutral-400 text-xs">{{page.date}}</span>
-          <p class="my-2">{{page.description}}...</p>
-          <a class="text-purple-800 dark:text-purple-500 font-semibold mt-2" href="{{page.path}}">Read more</a>
+          <p class="my-2">{{page.summary | striptags | safe}}</p>
+          <a class="text-purple-800 dark:text-purple-500 font-semibold mt-4 block w-full text-right" href="{{page.path}}">Read more</a>
         </div>
       </div>
     {% endfor %}

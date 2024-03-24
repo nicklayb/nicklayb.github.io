@@ -1,14 +1,14 @@
 +++
 title = "My love and hate for Elm"
 draft = true
-description = """
-"""
 
 [extra]
 tags = ["elm", "engineering", "functional"]
 +++
 
 What to say about [Elm](https://elm-lang.org)? At the same time such a delightful language but at the same time a worrying one. I cannot really explain clearly why I love/hate this language. But sure thing, it's a language that helps me reason about problems.
+
+<!-- more -->
 
 ## **Love**; The syntax
 

@@ -1,14 +1,11 @@
 +++
 title = "Yay, I have a blog"
-description = """
-Ah, finally. I wanted to start a blog for a year. I tried a lot of things. And I wasn't completely sure what I wanted in the end. I knew I wanted a website where I can show off things and have my own personal website. As a developer, I also wanted to write some code and not use an all-in-one setup.
-"""
 
 [extra]
 tags = ["phoenix", "first"]
 +++
 Ah, finally. I wanted to start a blog for a year. I tried a lot of things. And I wasn't completely sure what I wanted in the end. I knew I wanted a website where I can show off things and have my own personal website. As a developer, I also wanted to write some code and not use an all-in-one setup.
-
+<!-- more -->
 ## Trying things 💻
 
 I tried [Medium](https://medium.com/), which I love for reading posts. The editor is pretty interesting, pretty neat and slick. It doesn't have a bunch load of undesired features that bloats the interface. But the fact that the posts are not embeddable on a custom website annoyed me a lot. To have a custom website with a Medium blog, I would have had to link every Medium post manually and I would've forced the user to move to another website.
