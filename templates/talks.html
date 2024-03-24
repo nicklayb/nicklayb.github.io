@@ -9,10 +9,10 @@
 
   <div class="w-full">
     {% for page in section.extra.talks %}
-    <div class="w-full mt-8">
+    <div class="w-full mt-8 p-2 desktop:p-4 bg-slate-50 dark:bg-slate-900 rounded-md shadow-md">
       <h3 class="text-2xl desktop:text-3xl mb-2">{{page.title}}</h3>
       <div class="flex flex-col desktop:flex-row justify-between">
-        <a class="handle" href="{{page.location.url}}">@{{page.location.name}}</a>
+        <a class="font-bold text-purple-700 dark:text-purple-500" href="{{page.location.url}}">@{{page.location.name}}</a>
         <div class="">
           {% for tag in page.tags %}
             <span class="tag">{{tag}}</span>

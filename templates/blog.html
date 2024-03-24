@@ -9,7 +9,7 @@
 
   <div class="w-full">
     {% for page in section.pages %}
-      <div class="w-full mt-8 desktop:mt-12">
+      <div class="w-full mt-8 p-2 desktop:p-4 bg-slate-50 dark:bg-slate-900 rounded-md shadow-md desktop:mt-12">
         <div class="flex flex-col desktop:flex-row w-full justify-between items-start desktop:items-center">
           <h3 class="flex-initial text-2xl desktop:text-3xl mb-2">{{page.title}}</h3>
           <div class="flex-initial">
@@ -19,9 +19,9 @@
           </div>
         </div>
         <div class="pt-4">
-          <span class="text-neutral-500 text-xs">{{page.date}}</span>
+          <span class="text-neutral-500 dark:text-neutral-400 text-xs">{{page.date}}</span>
           <p class="my-2">{{page.description}}...</p>
-          <a class="text-purple-800 font-semibold mt-2" href="{{page.path}}">Read more</a>
+          <a class="text-purple-800 dark:text-purple-500 font-semibold mt-2" href="{{page.path}}">Read more</a>
         </div>
       </div>
     {% endfor %}

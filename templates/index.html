@@ -2,11 +2,15 @@
 
 {% block content %}
 <div class="flex flex-1 flex-col py-6 desktop:py-0 desktop:justify-center">
-  <h2 class="text-3xl desktop:text-5xl font-extrabold mb-10 desktop:mb-6">Hi, my name is <span class="text-purple-800">Nicolas Boisvert</span></h2>
-  <h3 class="text-xl desktop:text-3xl mb-10 desktop:mb-6">I am a software developer <a class="font-semibold text-purple-600" href="https://thescore.com">@theScore</a> and a functional programming adept</h3>
+  <h2 class="text-3xl desktop:text-5xl font-extrabold mb-10 desktop:mb-6 dark:text-slate-300">
+    Hi, my name is <span class="text-purple-800 dark:text-purple-600">Nicolas Boisvert</span>
+  </h2>
+  <h3 class="text-xl desktop:text-3xl mb-10 desktop:mb-6 dark:text-slate-300">
+    I am a software developer <a class="font-semibold text-purple-600" href="https://thescore.com">@theScore</a> and a functional programming adept
+  </h3>
   <div>
     <div class="flex flex-col desktop:flex-row flex-1 mb-6 desktop:mb-3">
-      <div class="flex-initial mr-2 mb-2 desktop:mb-0">Currently having fun with</div>
+      <div class="flex-initial mr-2 mb-2 desktop:mb-0 dark:text-slate-300">Currently having fun with</div>
       <div class="flex-initial">
         {% for language in config.extra.fun %}
         <span class="tag">{{language}}</span>
@@ -14,7 +18,7 @@
       </div>
     </div>
     <div class="flex flex-col desktop:flex-row flex-1">
-      <div class="flex-initial mr-2 mb-2 desktop:mb-0">Has knowledge with</div>
+      <div class="flex-initial mr-2 mb-2 desktop:mb-0 dark:text-slate-300">Has knowledge with</div>
       <div class="flex-initial">
         {% for language in config.extra.knowledge %}
         <span class="tag">{{language}}</span>

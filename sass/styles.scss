@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-slate-100;
+  @apply bg-slate-100 dark:bg-slate-800;
 }
 
 @layer components {
@@ -12,10 +12,10 @@ body {
   }
 
   .nav-item {
-    @apply flex flex-initial py-4 px-4 text-purple-800 hover:bg-purple-200 desktop:bg-transparent desktop:hover:bg-transparent desktop:border-b-2 desktop:border-b-transparent desktop:hover:border-b-purple-700;
+    @apply flex flex-initial py-4 px-4 text-purple-800 dark:text-slate-300 hover:bg-purple-200 desktop:bg-transparent desktop:hover:bg-transparent desktop:border-b-2 desktop:border-b-transparent desktop:hover:border-b-purple-700 dark:desktop:hover:border-b-purple-400 dark:desktop:text-purple-400;
 
     &.active {
-      @apply bg-purple-700 text-slate-100 desktop:bg-transparent desktop:text-purple-800 desktop:border-b-purple-800
+      @apply bg-purple-700 text-slate-100 desktop:bg-transparent desktop:text-purple-800 desktop:border-b-purple-800 desktop:dark:text-purple-400 desktop:dark:border-b-purple-400
     }
   }
 
@@ -27,17 +27,13 @@ body {
     @apply hover:text-purple-700;
   }
 
-  .handle {
-    @apply font-bold text-purple-700;
-  }
-
   .markdown {
     h2 {
-      @apply text-3xl font-bold mb-4;
+      @apply text-3xl font-bold mb-8;
     }
 
     h3 {
-      @apply text-2xl font-semibold mb-4;
+      @apply text-2xl font-semibold mb-6;
     }
 
     h4 {
