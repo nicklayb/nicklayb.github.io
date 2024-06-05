@@ -4,6 +4,22 @@ description = "Various open projects and experimentation I brought up with."
 template = "sandbox.html"
 
 [[extra.sandbox]]
+title = "Poisson"
+tags = ["elm", "frequency", "counter"]
+description = """
+Frequency counter made for my girlfriend to monitor the time between her contractions when she starts her labor. Since we heard we should head to the hospital once the contractions are every 5 minutes, I figured a simple app could help. Nope. It has nothing related to fishes like the name "poisson" implies.
+"""
+image = "poisson.png"
+
+[[extra.sandbox.links]]
+name = "Demo"
+link = "https://nicklayb.github.io/poisson"
+
+[[extra.sandbox.links]]
+name = "Source"
+link = "https://github.com/nicklayb/poisson"
+
+[[extra.sandbox]]
 title = "Chord Sheet"
 tags = ["elm", "chord", "music" ,"sheet"]
 description = """
