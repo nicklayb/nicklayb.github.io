@@ -14,7 +14,7 @@ highlight_code = true
 
 [extra]
 name = "Nicolas Boisvert"
-fun = ["Rust", "Haskell"]
+fun = ["Nix", "Rust", "C++", "Haskell"]
 knowledge = ["Elixir", "Elm", "Javascript", "Typescript", "C#", "Java", "PHP"]
 job_name = "theScore"
 job_link = "https://thescore.com"
