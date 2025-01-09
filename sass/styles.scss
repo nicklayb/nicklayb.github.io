@@ -41,19 +41,26 @@ body {
     }
 
     pre {
-      @apply py-2 border-l-4 border-l-purple-700 px-4 rounded-md;
+      @apply py-2 border-l-4 border-l-purple-700 px-4 rounded-md overflow-x-auto;
     }
 
     a {
-      @apply font-semibold text-purple-700;
+      @apply font-semibold text-purple-600;
     }
 
     p {
       @apply my-4 text-justify;
     }
 
+    p > code, a > code, li > code {
+      @apply text-purple-300 text-sm bg-gray-700 px-1 py-0.5 rounded-sm;
+    }
+
     ul {
       @apply ml-6 list-disc;
+    }
+    ol {
+      @apply ml-6 list-decimal;
     }
 
     li {
