@@ -10,9 +10,9 @@ After daily driving NixOS for around a year, I think I'm starting to understandi
 
 <!-- more -->
 
-Being on NixOS has a lot, but like **A LOT** of benefits for thinkerer, but I comes with its negative. Which are not actually negatives but more likely a test of your knowledge of the tools you use. I spent a whole day trying to just bootstrap an Elm project with Vite using a template project and never managed to do it. Because I didn't knew how the boilerplate works. It had dependencies that had dependencies that had binaries that had to be NixOS wrapped. I eventually kicked off a new project with ESBuild like I know how, in less than 15 minutes.
+Being on NixOS has a lot, but like **A LOT** of benefits for thinkerer, but I comes with its negative. Which are not actually negatives but more likely a test of your knowledge of the tools you use. I spent a whole day trying to just bootstrap an Elm project with Vite (something I had never used yet) using a template project and never managed to do it. Because I didn't knew how the boilerplate works. It had dependencies that had dependencies that had binaries that had to be NixOS wrapped. I eventually kicked off a new project with ESBuild like I know how, in less than 15 minutes.
 
-When I say it tests your knowledge it is because in order to be able to code in a specific language, you have to configure a nix environment that has what's necessary to code in this language. What I was usually doing in the past with `asdf` on my Mac, I now need to do it in nix but even more precisely. But I'm getting there.
+When I say it tests your knowledge it is because in order to be able to code in a specific language, you have to configure a nix environment that has what's necessary to code in this language. What I was usually doing in the past with `asdf` on my Mac, I now need to do it in nix but even more precisely. That's a good thing, really, but I'm slowly getting there.
 
 ## I'm here for random wallpapers, how?
 
@@ -52,13 +52,13 @@ So I just built a [Unsplash Proxy](https://github.com/nicklayb/unsplash-proxy) a
 
 ### 2. Dealing with systemd
 
-One of the most worthful read I had was the [Arch's systemd documentation](https://wiki.archlinux.org/title/Systemd) (can we take a moment to appreciate how amazing Arch's documentation is?). This documentation was so insightful. Systemd is the backbone of how most Linux system works, it's important to understand it.
+One of the most worthful read I ever had was the [Arch's systemd documentation](https://wiki.archlinux.org/title/Systemd) (can we take a moment to appreciate how amazing Arch's documentation is?). This documentation was so insightful. Systemd is the backbone of how most Linux system works, it's important to understand it.
 
-It helped to understand I would need to feature from systemd: A service (duh!?), and a timer.
+It helped to understand I would need two feature from systemd: A service (duh!?), and a timer.
 
 Basically, to make it simple, the timer is running just like a cron job but it starts your service unit according to a given timer config. For instance, mine is configured for every 2 hours, 5 minutes after booting.
 
-In my config a requiring a pattern of wallpaper locations plus their corresponding screens. So that I can configure Hyprpaper correctly as well. This is the gist of it:
+In my config I'm requiring a pattern of wallpaper locations plus their corresponding screens. So that I can configure Hyprpaper correctly as well. This is the gist of it:
 
 ```nix
 {
@@ -204,7 +204,7 @@ In my config a requiring a pattern of wallpaper locations plus their correspondi
 
 [source](https://github.com/nicklayb/nixos-config/blob/25.11/modules/desktop_environment/hyprland/default.nix)
 
-What I like about systemd timers/servicers is the observability you get that is built in and easy to manage. There's a lot of handful command to help you debug it:
+What I like about systemd timers/services over cron is the observability you get that is built in and it's easier to manage. There's a lot of handful command to help you debug it:
 
 - `systemctl --user status switch-wallpapers.service`: Gets the status of the service
 - `systemctl --user cat switch-wallpapers.service`: Opens the service file, so you can see how its sources look and if you made any typos (like I did)
@@ -240,7 +240,7 @@ randomWallpapers = {
 
 [source](https://github.com/nicklayb/nixos-config/blob/25.11/hosts/t480s/configuration.nix)
 
-So my logic here is will always use this laptop with either screen + monitor or just monitor. So I mapped one random wallpaper to my laptop screen, and one to my external monitor, whatever that is or however it's connected.
+So my logic here is will always use this laptop with either just screen, just monitor, or both, but never more. So I mapped one random wallpaper to my laptop screen, and one to my external monitor, whatever that is or however it's connected.
 
 I'm querying mountains wallpaper, I love mountains.
 
