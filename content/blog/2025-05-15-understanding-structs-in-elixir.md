@@ -1,5 +1,6 @@
 +++
 title = "Understanding structs in Elixir"
+draft = true
 
 [extra]
 tags = ["elixir", "struct", "functional", "erlang"]

@@ -2,7 +2,7 @@ default: start
 
 # Starts dev server
 serve:
-	zola serve --interface 0.0.0.0
+	zola serve --interface 127.0.0.1
 
 # Watches and rebuild CSS
 watch-css:
@@ -24,4 +24,4 @@ start: setup kill
 
 # Stops development stack
 kill: 
-	pm2 delete all
+	-pm2 delete all
