@@ -1,6 +1,6 @@
 +++
 title = "Sandbox"
-description = "Various open projects and experimentation I brought up with."
+description = "Various open projects and experimentation I came up with."
 template = "sandbox.html"
 
 [[extra.sandbox]]

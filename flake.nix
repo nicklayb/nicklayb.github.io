@@ -15,7 +15,7 @@
           devShells.default = pkgs.mkShell {
             buildInputs = with pkgs; [ 
               cargo
-              gnumake
+              just
               nodejs_22
               zola
               pm2
