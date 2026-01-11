@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Nicolas Boisvert</title>
+    <link rel="stylesheet" href="https://nboisvert.com/styles/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-81B4LEX9Y8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-81B4LEX9Y8');
+    </script>
+    
+  </head>
+
+  <body class="h-screen flex flex-col">
+    <nav class="container flex flex-initial mb-4 text-lg">
+      <div class="flex flex-1 flex-col desktop:flex-row ">
+        <div class="flex justify-between">
+          <span class="py-4 px-4 desktop:pl-0 font-bold dark:text-slate-300">Nicolas Boisvert</span>
+          <label for="hamburger" tabindex="0" class="flex desktop:hidden px-4 items-center cursor-pointer dark:text-slate-300" onclick="toggleMenu()">
+            <span class="hamburger">
+              <svg width="20px" height="20px" viewBox="0 0 12 12" enable-background="new 0 0 12 12" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g> <rect fill="currentColor" height="1" width="11" x="0.5" y="5.5"/> <rect fill="currentColor" height="1" width="11" x="0.5" y="2.5"/> <rect fill="currentColor" height="1" width="11" x="0.5" y="8.5"/></g></svg>
+            </span>
+            <span class="cross hidden">
+              <svg fill="currentColor" height="16px" width="16px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 460.775 460.775" xml:space="preserve"> <path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55 c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55 c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505 c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55 l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719 c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"/> </svg>
+            </span>
+          </label>
+        </div>
+        <input class="hidden" type="checkbox" name="hamburger">
+        <div class="flex flex-1 flex-col desktop:flex-row desktop:justify-between shadow-lg desktop:shadow-none" id="menu">
+          <div class="flex flex-initial flex-col desktop:flex-row">
+            
+            <a class="nav-item " href="&#x2F;">Home</a>
+            
+            <a class="nav-item " href="&#x2F;blog&#x2F;">Blog</a>
+            
+            <a class="nav-item active" href="&#x2F;talks&#x2F;">Talks</a>
+            
+            <a class="nav-item " href="&#x2F;sandbox&#x2F;">Sandbox</a>
+            
+          </div>
+          <div class="flex-initial flex-col desktop:flex-row">
+            
+              <a class="nav-item" href="https:&#x2F;&#x2F;github.com&#x2F;nicklayb">GitHub</a>
+            
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="flex flex-1 container px-2 desktop:px-0 dark:text-slate-200">
+      
+
+<div class="w-full">
+  <h1 class="text-4xl font-extrabold mb-6">Talks</h1>
+
+  <p class="text-center py-2 text-slate-400">Talks about programming I have done over the years</p>
+
+  <div class="w-full">
+    
+    <div class="w-full mt-8 p-2 desktop:p-4 bg-slate-50 dark:bg-slate-900 rounded-md shadow-md">
+      <h3 class="text-2xl desktop:text-3xl mb-2">Escripting the hell out of this</h3>
+      <div class="flex flex-col desktop:flex-row justify-between">
+        <a class="font-bold text-purple-700 dark:text-purple-500" href="http:&#x2F;&#x2F;www.montrealelixir.ca&#x2F;">@Montreal Elixir</a>
+        <div class="">
+          
+            <span class="tag">elixir</span>
+          
+            <span class="tag">escript</span>
+          
+            <span class="tag">cli</span>
+          
+        </div>
+      </div>
+      <div class="py-4">
+        <iframe
+          width="100%"
+          height="500"
+          src="https://www.youtube.com/embed/2zMIFFWqej4"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+    
+    <div class="w-full mt-8 p-2 desktop:p-4 bg-slate-50 dark:bg-slate-900 rounded-md shadow-md">
+      <h3 class="text-2xl desktop:text-3xl mb-2">Introducing Leex and Yecc</h3>
+      <div class="flex flex-col desktop:flex-row justify-between">
+        <a class="font-bold text-purple-700 dark:text-purple-500" href="http:&#x2F;&#x2F;www.montrealelixir.ca&#x2F;">@Montreal Elixir</a>
+        <div class="">
+          
+            <span class="tag">elixir</span>
+          
+            <span class="tag">leex</span>
+          
+            <span class="tag">yecc</span>
+          
+            <span class="tag">lexer</span>
+          
+            <span class="tag">parser</span>
+          
+        </div>
+      </div>
+      <div class="py-4">
+        <iframe
+          width="100%"
+          height="500"
+          src="https://www.youtube.com/embed/iHFwdsPgAEU"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+    
+    <div class="w-full mt-8 p-2 desktop:p-4 bg-slate-50 dark:bg-slate-900 rounded-md shadow-md">
+      <h3 class="text-2xl desktop:text-3xl mb-2">Publishing to Hex</h3>
+      <div class="flex flex-col desktop:flex-row justify-between">
+        <a class="font-bold text-purple-700 dark:text-purple-500" href="http:&#x2F;&#x2F;www.montrealelixir.ca&#x2F;">@Montreal Elixir</a>
+        <div class="">
+          
+            <span class="tag">elixir</span>
+          
+            <span class="tag">mix</span>
+          
+            <span class="tag">hex</span>
+          
+            <span class="tag">packages</span>
+          
+            <span class="tag">semver</span>
+          
+        </div>
+      </div>
+      <div class="py-4">
+        <iframe
+          width="100%"
+          height="500"
+          src="https://www.youtube.com/embed/pfZCWdgBSaY"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+    </section>
+    <footer class="py-4 desktop:py-6 bg-slate-200 dark:bg-slate-900 mt-4 desktop:mt-6">
+      <div class="container flex flex-col desktop:flex-row justify-evenly">
+        <div class="flex flex-initial justify-evenly desktop:justify-start desktop:items-center flex-row desktop:flex-col">
+          
+          <a class="footer-nav-item " href="&#x2F;">Home</a>
+          
+          <a class="footer-nav-item " href="&#x2F;blog&#x2F;">Blog</a>
+          
+          <a class="footer-nav-item border-b-purple-800" href="&#x2F;talks&#x2F;">Talks</a>
+          
+          <a class="footer-nav-item " href="&#x2F;sandbox&#x2F;">Sandbox</a>
+          
+        </div>
+        <div class="flex flex-initial justify-evenly desktop:justify-start items-center text-xs desktop:text-sm flex-row desktop:flex-col">
+          
+          <a class="footer-nav-item " href="https:&#x2F;&#x2F;github.com&#x2F;nicklayb">GitHub</a>
+          
+          <a class="footer-nav-item" href="mailto:nicolas@nboisvert.com">nicolas@nboisvert.com</a>
+          <span class="hidden desktop:block footer-nav-item">Shawinigan, QC, Canada</span>
+          <span class="hidden desktop:block footer-nav-item">Coding with ❤️</span>
+        </div>
+        <div class="flex flex-initial justify-evenly desktop:justify-start desktop:items-center text-xs desktop:text-sm flex-row desktop:flex-col">
+          <span class="footer-nav-item">Built with</span>
+          <a class="footer-nav-item" href="https://www.getzola.org/">Zola</a>
+          <a class="footer-nav-item" href="https://tailwindcss.com/">TailwindCSS</a>
+          <a class="footer-nav-item" href="https://github.com/nicklayb/zola-nboisvert.com">Source</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script type="text/javascript">
+    function toggleMenu() {
+      const hamburger = document.querySelector('input[name="hamburger"]')
+      const xElement = document.querySelector(".cross")
+      const hamburgerElement = document.querySelector(".hamburger")
+      hamburger.checked = !hamburger.checked
+
+      if (hamburger.checked) {
+        xElement.classList.remove("hidden")
+        hamburgerElement.classList.add("hidden")
+      } else {
+        xElement.classList.add("hidden")
+        hamburgerElement.classList.remove("hidden")
+      }
+    }
+  </script>
+</html>

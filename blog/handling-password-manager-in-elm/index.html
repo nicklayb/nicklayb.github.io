@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Nicolas Boisvert</title>
+    <link rel="stylesheet" href="https://nboisvert.com/styles/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-81B4LEX9Y8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-81B4LEX9Y8');
+    </script>
+    
+  </head>
+
+  <body class="h-screen flex flex-col">
+    <nav class="container flex flex-initial mb-4 text-lg">
+      <div class="flex flex-1 flex-col desktop:flex-row ">
+        <div class="flex justify-between">
+          <span class="py-4 px-4 desktop:pl-0 font-bold dark:text-slate-300">Nicolas Boisvert</span>
+          <label for="hamburger" tabindex="0" class="flex desktop:hidden px-4 items-center cursor-pointer dark:text-slate-300" onclick="toggleMenu()">
+            <span class="hamburger">
+              <svg width="20px" height="20px" viewBox="0 0 12 12" enable-background="new 0 0 12 12" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g> <rect fill="currentColor" height="1" width="11" x="0.5" y="5.5"/> <rect fill="currentColor" height="1" width="11" x="0.5" y="2.5"/> <rect fill="currentColor" height="1" width="11" x="0.5" y="8.5"/></g></svg>
+            </span>
+            <span class="cross hidden">
+              <svg fill="currentColor" height="16px" width="16px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 460.775 460.775" xml:space="preserve"> <path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55 c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55 c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505 c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55 l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719 c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"/> </svg>
+            </span>
+          </label>
+        </div>
+        <input class="hidden" type="checkbox" name="hamburger">
+        <div class="flex flex-1 flex-col desktop:flex-row desktop:justify-between shadow-lg desktop:shadow-none" id="menu">
+          <div class="flex flex-initial flex-col desktop:flex-row">
+            
+            <a class="nav-item " href="&#x2F;">Home</a>
+            
+            <a class="nav-item " href="&#x2F;blog&#x2F;">Blog</a>
+            
+            <a class="nav-item " href="&#x2F;talks&#x2F;">Talks</a>
+            
+            <a class="nav-item " href="&#x2F;sandbox&#x2F;">Sandbox</a>
+            
+          </div>
+          <div class="flex-initial flex-col desktop:flex-row">
+            
+              <a class="nav-item" href="https:&#x2F;&#x2F;github.com&#x2F;nicklayb">GitHub</a>
+            
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="flex flex-1 container px-2 desktop:px-0 dark:text-slate-200">
+      
+
+<div class="w-full">
+  <h2 class="text-2xl font-bold">Table of content</h2>
+  <div class="py-4">
+    
+      <ul class="ml-4">
+      
+        <li>
+          <a class="text-purple-400" href="https://nboisvert.com/blog/handling-password-manager-in-elm/#what-s-the-problem-actually">What&#x27;s the problem actually?</a>
+          
+        </li>
+      
+        <li>
+          <a class="text-purple-400" href="https://nboisvert.com/blog/handling-password-manager-in-elm/#potential-solution">Potential solution</a>
+          
+        </li>
+      
+        <li>
+          <a class="text-purple-400" href="https://nboisvert.com/blog/handling-password-manager-in-elm/#the-solution">The Solution</a>
+          
+        </li>
+      
+      </ul>
+    
+  </div>
+  <h1 class="text-4xl font-extrabold mt-4 mb-6 px-4 py-6 border-l-4 border-l-purple-700">Handling Password Manager in Elm</h1>
+  <div class="markdown">
+    <p>I've been running my <a href="https://meep.games">Meep</a> app for a couple years now and logging all my board games game into it. It has worked fine but one thing was constantly annoying me; I couldn't use 1Password with it. Actually, I could, but I needed to enter each field and add space then remove it to trigger the message dispatch, pretty annoying. Then I saw a friend of mine trying to register with its password manager and failed and I thought, alright, enough.</p>
+<span id="continue-reading"></span><h2 id="what-s-the-problem-actually">What's the problem actually?</h2>
+<p>Why is it not working in the first place? That's pretty simple in the end. Elm doesn't expose a <code>onChange</code> (which handles <code>&quot;change&quot;</code>) event handler (Why? Go figure...), it only exposes <code>onInput</code> (which handles <code>&quot;input&quot;</code>). The 1Password extensoin doesn't fire an <code>&quot;input&quot;</code> change, it fires a <code>&quot;change&quot;</code> so the that's why it doesn't make it to Elm.</p>
+<h2 id="potential-solution">Potential solution</h2>
+<p>My first solution was to add a JS event handler that would bind <code>onchange</code> to a function that would fire to a port and the app would forward the external change to the inside of the app.</p>
+<p>I'm sure you thought &quot;Does it needs to be that complicated?&quot; while reading that sentence. It does not, got to <a href="https://nboisvert.com/blog/handling-password-manager-in-elm/#the-solution">The Solution</a> if you wanna head straight to the solution. But you can continue reading and see how hard Elm is trying to make it.</p>
+<p>So I try that, I add a <code>Attributes.attribute &quot;onchange&quot; &quot;console.log(event)</code> just to see if that works. It should right? It does not. Calling <code>Attributes.attribute</code> will <a href="https://github.com/elm/virtual-dom/blob/962f55501704292d8b2b66695fc1f587b5185ef7/src/Elm/Kernel/VirtualDom.js#L299">prefix the key of the attribute</a> with <code>data-</code> if you try to add an attribute that is an event handler (Again, why? Go figure).</p>
+<p>In the end I needed to call <code>Elm.Kernel.VirtualDom.attribute &quot;onchange&quot;, &quot;console.log(event)&quot;</code>, to get that working. I was about to work on the port solution until I actually started using my head.</p>
+<h2 id="the-solution">The Solution</h2>
+<p>It turns out the solution is far easier and doesn't need any ports. Elm exposes <code>Html.Events.stopPropagationOn</code> which allows to bind custom event (like <code>&quot;change&quot;</code>). So I just made sure my <code>Form.input</code> function had both <code>onInput</code> and a custom <code>onChange</code> as event handler and the deal is done. See below for the basic gist of it</p>
+<pre data-lang="elm" style="background-color:#2b303b;color:#c0c5ce;" class="language-elm "><code class="language-elm" data-lang="elm"><span style="color:#b48ead;">module </span><span>Form </span><span style="color:#b48ead;">exposing </span><span>(</span><span style="color:#8fa1b3;">input</span><span>)
+</span><span>
+</span><span style="color:#b48ead;">import </span><span>Html </span><span style="color:#b48ead;">exposing </span><span>(</span><span style="color:#b48ead;">Html Attribute</span><span>)
+</span><span style="color:#b48ead;">import </span><span>Html.Events </span><span style="color:#b48ead;">exposing </span><span>(</span><span style="color:#8fa1b3;">stopPropagationOn</span><span>, </span><span style="color:#8fa1b3;">targetValue</span><span>)
+</span><span style="color:#b48ead;">import </span><span>Json.Decode
+</span><span>
+</span><span style="color:#8fa1b3;">onChange </span><span style="color:#b48ead;">:</span><span> (</span><span style="color:#b48ead;">String -&gt; </span><span style="color:#bf616a;">msg</span><span>) </span><span style="color:#b48ead;">-&gt; Attribute </span><span style="color:#bf616a;">msg
+</span><span style="color:#8fa1b3;">onChange </span><span>tagger =
+</span><span>    </span><span style="color:#65737e;">-- This is pretty much the same code as the `onInput` function with `&quot;change&quot;` instead
+</span><span>    stopPropagationOn &quot;</span><span style="color:#a3be8c;">change</span><span>&quot; </span><span style="color:#b48ead;">(</span><span style="color:#d08770;">Json</span><span>.</span><span style="color:#d08770;">Decode</span><span>.map </span><span style="color:#b48ead;">(</span><span>\x -&gt; </span><span style="color:#b48ead;">(</span><span> x</span><span style="color:#96b5b4;">, </span><span style="color:#d08770;">True </span><span style="color:#b48ead;">)) (</span><span style="color:#d08770;">Json</span><span>.</span><span style="color:#d08770;">Decode</span><span>.map tagger targetValue</span><span style="color:#b48ead;">))
+</span><span>
+</span><span style="color:#8fa1b3;">input </span><span>= msg -&gt; </span><span style="color:#d08770;">Html</span><span> msg
+</span><span style="color:#8fa1b3;">input </span><span>msg = 
+</span><span>    </span><span style="color:#d08770;">Html</span><span>.input </span><span style="color:#96b5b4;">[</span><span> onInput msg</span><span style="color:#96b5b4;">,</span><span> onChange msg </span><span style="color:#96b5b4;">] []
+</span></code></pre>
+<p>No more complicted than that. I know it's simple in the end but I figured it might help some beginners.</p>
+
+  </div>
+</div>
+
+
+    </section>
+    <footer class="py-4 desktop:py-6 bg-slate-200 dark:bg-slate-900 mt-4 desktop:mt-6">
+      <div class="container flex flex-col desktop:flex-row justify-evenly">
+        <div class="flex flex-initial justify-evenly desktop:justify-start desktop:items-center flex-row desktop:flex-col">
+          
+          <a class="footer-nav-item " href="&#x2F;">Home</a>
+          
+          <a class="footer-nav-item " href="&#x2F;blog&#x2F;">Blog</a>
+          
+          <a class="footer-nav-item " href="&#x2F;talks&#x2F;">Talks</a>
+          
+          <a class="footer-nav-item " href="&#x2F;sandbox&#x2F;">Sandbox</a>
+          
+        </div>
+        <div class="flex flex-initial justify-evenly desktop:justify-start items-center text-xs desktop:text-sm flex-row desktop:flex-col">
+          
+          <a class="footer-nav-item " href="https:&#x2F;&#x2F;github.com&#x2F;nicklayb">GitHub</a>
+          
+          <a class="footer-nav-item" href="mailto:nicolas@nboisvert.com">nicolas@nboisvert.com</a>
+          <span class="hidden desktop:block footer-nav-item">Shawinigan, QC, Canada</span>
+          <span class="hidden desktop:block footer-nav-item">Coding with ❤️</span>
+        </div>
+        <div class="flex flex-initial justify-evenly desktop:justify-start desktop:items-center text-xs desktop:text-sm flex-row desktop:flex-col">
+          <span class="footer-nav-item">Built with</span>
+          <a class="footer-nav-item" href="https://www.getzola.org/">Zola</a>
+          <a class="footer-nav-item" href="https://tailwindcss.com/">TailwindCSS</a>
+          <a class="footer-nav-item" href="https://github.com/nicklayb/zola-nboisvert.com">Source</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script type="text/javascript">
+    function toggleMenu() {
+      const hamburger = document.querySelector('input[name="hamburger"]')
+      const xElement = document.querySelector(".cross")
+      const hamburgerElement = document.querySelector(".hamburger")
+      hamburger.checked = !hamburger.checked
+
+      if (hamburger.checked) {
+        xElement.classList.remove("hidden")
+        hamburgerElement.classList.add("hidden")
+      } else {
+        xElement.classList.add("hidden")
+        hamburgerElement.classList.remove("hidden")
+      }
+    }
+  </script>
+</html>

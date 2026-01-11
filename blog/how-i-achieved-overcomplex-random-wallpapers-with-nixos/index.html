@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Nicolas Boisvert</title>
+    <link rel="stylesheet" href="https://nboisvert.com/styles/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-81B4LEX9Y8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-81B4LEX9Y8');
+    </script>
+    
+  </head>
+
+  <body class="h-screen flex flex-col">
+    <nav class="container flex flex-initial mb-4 text-lg">
+      <div class="flex flex-1 flex-col desktop:flex-row ">
+        <div class="flex justify-between">
+          <span class="py-4 px-4 desktop:pl-0 font-bold dark:text-slate-300">Nicolas Boisvert</span>
+          <label for="hamburger" tabindex="0" class="flex desktop:hidden px-4 items-center cursor-pointer dark:text-slate-300" onclick="toggleMenu()">
+            <span class="hamburger">
+              <svg width="20px" height="20px" viewBox="0 0 12 12" enable-background="new 0 0 12 12" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g> <rect fill="currentColor" height="1" width="11" x="0.5" y="5.5"/> <rect fill="currentColor" height="1" width="11" x="0.5" y="2.5"/> <rect fill="currentColor" height="1" width="11" x="0.5" y="8.5"/></g></svg>
+            </span>
+            <span class="cross hidden">
+              <svg fill="currentColor" height="16px" width="16px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 460.775 460.775" xml:space="preserve"> <path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55 c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55 c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505 c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55 l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719 c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"/> </svg>
+            </span>
+          </label>
+        </div>
+        <input class="hidden" type="checkbox" name="hamburger">
+        <div class="flex flex-1 flex-col desktop:flex-row desktop:justify-between shadow-lg desktop:shadow-none" id="menu">
+          <div class="flex flex-initial flex-col desktop:flex-row">
+            
+            <a class="nav-item " href="&#x2F;">Home</a>
+            
+            <a class="nav-item " href="&#x2F;blog&#x2F;">Blog</a>
+            
+            <a class="nav-item " href="&#x2F;talks&#x2F;">Talks</a>
+            
+            <a class="nav-item " href="&#x2F;sandbox&#x2F;">Sandbox</a>
+            
+          </div>
+          <div class="flex-initial flex-col desktop:flex-row">
+            
+              <a class="nav-item" href="https:&#x2F;&#x2F;github.com&#x2F;nicklayb">GitHub</a>
+            
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="flex flex-1 container px-2 desktop:px-0 dark:text-slate-200">
+      
+
+<div class="w-full">
+  <h2 class="text-2xl font-bold">Table of content</h2>
+  <div class="py-4">
+    
+      <ul class="ml-4">
+      
+        <li>
+          <a class="text-purple-400" href="https://nboisvert.com/blog/how-i-achieved-overcomplex-random-wallpapers-with-nixos/#i-m-here-for-random-wallpapers-how">I&#x27;m here for random wallpapers, how?</a>
+          
+            <ul class="ml-4">
+              
+                <li class="py-1">
+                  <a class="text-purple-300" href="https://nboisvert.com/blog/how-i-achieved-overcomplex-random-wallpapers-with-nixos/#1-a-script-that-downloads-wallpapers-from-unsplash">1. A script that downloads wallpapers from Unsplash</a>
+                  
+                    <ul class="ml-4">
+                      
+                        <li class="py-1">
+                          <a class="text-purple-200" href="https://nboisvert.com/blog/how-i-achieved-overcomplex-random-wallpapers-with-nixos/#what-is-this-url">What is this URL?</a>
+                        </li>
+                      
+                    </ul>
+                  
+                </li>
+              
+                <li class="py-1">
+                  <a class="text-purple-300" href="https://nboisvert.com/blog/how-i-achieved-overcomplex-random-wallpapers-with-nixos/#2-dealing-with-systemd">2. Dealing with systemd</a>
+                  
+                </li>
+              
+                <li class="py-1">
+                  <a class="text-purple-300" href="https://nboisvert.com/blog/how-i-achieved-overcomplex-random-wallpapers-with-nixos/#3-enabling-it">3. Enabling it</a>
+                  
+                </li>
+              
+            </ul>
+          
+        </li>
+      
+        <li>
+          <a class="text-purple-400" href="https://nboisvert.com/blog/how-i-achieved-overcomplex-random-wallpapers-with-nixos/#what-s-next">What&#x27;s next?</a>
+          
+        </li>
+      
+      </ul>
+    
+  </div>
+  <h1 class="text-4xl font-extrabold mt-4 mb-6 px-4 py-6 border-l-4 border-l-purple-700">How I achieved overcomplex random wallpapers with NixOS and Hyprpaper</h1>
+  <div class="markdown">
+    <p>After daily driving NixOS for around a year, I think I'm starting to understanding the thing. The more I understand it, the more I like it. I've kept on adding new stuff to my systems weekly (I'm saying systems even though I might only have added it to one, but it's NixOS, so they'll have it after fingersnap rebuild).</p>
+<span id="continue-reading"></span>
+<p>Being on NixOS has a lot, but like <strong>A LOT</strong> of benefits for thinkerer, but I comes with its negative. Which are not actually negatives but more likely a test of your knowledge of the tools you use. I spent a whole day trying to just bootstrap an Elm project with Vite (something I had never used yet) using a template project and never managed to do it. Because I didn't knew how the boilerplate works. It had dependencies that had dependencies that had binaries that had to be NixOS wrapped. I eventually kicked off a new project with ESBuild like I know how, in less than 15 minutes.</p>
+<p>When I say it tests your knowledge it is because in order to be able to code in a specific language, you have to configure a nix environment that has what's necessary to code in this language. What I was usually doing in the past with <code>asdf</code> on my Mac, I now need to do it in nix but even more precisely. That's a good thing, really, but I'm slowly getting there.</p>
+<h2 id="i-m-here-for-random-wallpapers-how">I'm here for random wallpapers, how?</h2>
+<p>Enough talking here's how I did it.</p>
+<h3 id="1-a-script-that-downloads-wallpapers-from-unsplash">1. A script that downloads wallpapers from Unsplash</h3>
+<p><a href="https://unsplash.com">Unsplash</a> is a great source of wonderful images (99% of wallpapers are found there), I'm a landscape/space kind of person, Unsplash has me covered. They expose an API allowing you to pull random images based off a query, so that's what I used:</p>
+<pre data-lang="sh" style="background-color:#2b303b;color:#c0c5ce;" class="language-sh "><code class="language-sh" data-lang="sh"><span style="color:#65737e;">#!/usr/bin/env sh
+</span><span>
+</span><span style="color:#bf616a;">QUERY</span><span>=$</span><span style="color:#bf616a;">1
+</span><span style="color:#bf616a;">DESTINATION</span><span>=$</span><span style="color:#bf616a;">2
+</span><span>
+</span><span style="color:#bf616a;">API_URL</span><span>=&quot;</span><span style="color:#a3be8c;">http://hal.nboisvert.local:7070/photos/random</span><span>&quot;
+</span><span>
+</span><span style="color:#bf616a;">RAW_URL</span><span>=$</span><span style="color:#a3be8c;">(</span><span style="color:#bf616a;">curl -G -H </span><span>&quot;</span><span style="color:#a3be8c;">Accept: application/json</span><span>&quot;</span><span style="color:#bf616a;"> --data-urlencode</span><span>=&quot;</span><span style="color:#a3be8c;">orientation=landscape</span><span>&quot;</span><span style="color:#bf616a;"> --data-urlencode</span><span>=&quot;</span><span style="color:#a3be8c;">query=</span><span>$</span><span style="color:#bf616a;">QUERY</span><span>&quot;</span><span style="color:#bf616a;"> -s </span><span>&quot;$</span><span style="color:#bf616a;">API_URL</span><span>&quot; | </span><span style="color:#bf616a;">jq -r </span><span>&#39;</span><span style="color:#a3be8c;">.urls.raw</span><span>&#39;</span><span style="color:#a3be8c;">)
+</span><span>
+</span><span style="color:#b48ead;">if </span><span style="color:#96b5b4;">[ </span><span style="color:#bf616a;">-z </span><span>&quot;$</span><span style="color:#bf616a;">RAW_URL</span><span>&quot; </span><span style="color:#96b5b4;">] </span><span>|| </span><span style="color:#96b5b4;">[ </span><span>&quot;$</span><span style="color:#bf616a;">RAW_URL</span><span>&quot; = &quot;</span><span style="color:#a3be8c;">null</span><span>&quot; </span><span style="color:#96b5b4;">]</span><span>; </span><span style="color:#b48ead;">then
+</span><span>  </span><span style="color:#96b5b4;">echo </span><span>&quot;</span><span style="color:#a3be8c;">Invalid URL</span><span>&quot;
+</span><span>  </span><span style="color:#96b5b4;">exit</span><span> 1
+</span><span style="color:#b48ead;">fi
+</span><span>
+</span><span style="color:#bf616a;">curl -L </span><span>&quot;$</span><span style="color:#bf616a;">RAW_URL</span><span>&quot;</span><span style="color:#bf616a;"> -o </span><span>&quot;$</span><span style="color:#bf616a;">DESTINATION</span><span>&quot;
+</span></code></pre>
+<p><a href="https://github.com/nicklayb/nixos-config/blob/25.11/modules/desktop_environment/hyprland/pull-wallpaper.sh">source</a></p>
+<h4 id="what-is-this-url">What is this URL?</h4>
+<p>You probably noticed the <code>API_URL</code> being <code>http://hal.nboisvert.local:7070</code> instead of <code>https://api.unsplash.com</code>. Yeah, another overcomplicated bit. Since the random wallpaper setup will be installed on many computers, I didn't want to need my API key. </p>
+<p>So I just built a <a href="https://github.com/nicklayb/unsplash-proxy">Unsplash Proxy</a> app that forwards all requests to Unsplash inferring the API key. It also have a cache layer preventing me from over calling the API if something happens. I'm fine with the random wallpaper working only on my network. This app is running as a docker container on my server and serving my random wallpapers perfectly!</p>
+<h3 id="2-dealing-with-systemd">2. Dealing with systemd</h3>
+<p>One of the most worthful read I ever had was the <a href="https://wiki.archlinux.org/title/Systemd">Arch's systemd documentation</a> (can we take a moment to appreciate how amazing Arch's documentation is?). This documentation was so insightful. Systemd is the backbone of how most Linux system works, it's important to understand it.</p>
+<p>It helped to understand I would need two feature from systemd: A service (duh!?), and a timer.</p>
+<p>Basically, to make it simple, the timer is running just like a cron job but it starts your service unit according to a given timer config. For instance, mine is configured for every 2 hours, 5 minutes after booting.</p>
+<p>In my config I'm requiring a pattern of wallpaper locations plus their corresponding screens. So that I can configure Hyprpaper correctly as well. This is the gist of it:</p>
+<pre data-lang="nix" style="background-color:#2b303b;color:#c0c5ce;" class="language-nix "><code class="language-nix" data-lang="nix"><span>{
+</span><span>  config,
+</span><span>  lib,
+</span><span>  pkgs,
+</span><span>  username,
+</span><span>  ...
+</span><span style="color:#8fa1b3;">}</span><span>:
+</span><span>{
+</span><span>  </span><span style="color:#d08770;">options </span><span>= {
+</span><span>    </span><span style="color:#65737e;">#
+</span><span>    </span><span style="color:#65737e;"># Here is where the random wallpaper module is configured:
+</span><span>    </span><span style="color:#65737e;">#
+</span><span>    </span><span style="color:#d08770;">mods</span><span>.</span><span style="color:#d08770;">hyprland </span><span>= {
+</span><span>      </span><span style="color:#d08770;">enable </span><span>= </span><span style="color:#bf616a;">lib</span><span>.</span><span style="color:#bf616a;">mkEnableOption </span><span>&quot;</span><span style="color:#a3be8c;">Enables Hyprland</span><span>&quot;;
+</span><span>      </span><span style="color:#65737e;"># Some configs ...
+</span><span>      </span><span style="color:#d08770;">hyprpaper </span><span>= {
+</span><span>        </span><span style="color:#d08770;">randomWallpapers </span><span>= {
+</span><span>          </span><span style="color:#d08770;">enable </span><span>= </span><span style="color:#bf616a;">lib</span><span>.</span><span style="color:#bf616a;">mkEnableOption </span><span>&quot;</span><span style="color:#a3be8c;">Enables random wallpapers</span><span>&quot;;
+</span><span>          </span><span style="color:#d08770;">query </span><span>= </span><span style="color:#bf616a;">lib</span><span>.</span><span style="color:#bf616a;">mkOption </span><span>{
+</span><span>            </span><span style="color:#d08770;">description </span><span>= &quot;</span><span style="color:#a3be8c;">Query to use with Unsplash</span><span>&quot;;
+</span><span>            </span><span style="color:#d08770;">type </span><span>= </span><span style="color:#bf616a;">lib</span><span>.</span><span style="color:#bf616a;">types</span><span>.</span><span style="color:#bf616a;">str</span><span>;
+</span><span>          };
+</span><span>          </span><span style="color:#d08770;">mapping </span><span>=
+</span><span>            </span><span style="color:#b48ead;">let
+</span><span>              </span><span style="color:#d08770;">innerMapping </span><span>= </span><span style="color:#bf616a;">lib</span><span>.</span><span style="color:#bf616a;">types</span><span>.</span><span style="color:#bf616a;">submodule </span><span>{
+</span><span>                </span><span style="color:#d08770;">options </span><span>= {
+</span><span>                  </span><span style="color:#d08770;">wallpaper </span><span>= </span><span style="color:#bf616a;">lib</span><span>.</span><span style="color:#bf616a;">mkOption </span><span>{
+</span><span>                    </span><span style="color:#d08770;">type </span><span>= </span><span style="color:#bf616a;">lib</span><span>.</span><span style="color:#bf616a;">types</span><span>.</span><span style="color:#bf616a;">str</span><span>;
+</span><span>                    </span><span style="color:#d08770;">description </span><span>= &quot;</span><span style="color:#a3be8c;">Wallpaper path</span><span>&quot;;
+</span><span>                  };
+</span><span>                  </span><span style="color:#d08770;">monitors </span><span>= </span><span style="color:#bf616a;">lib</span><span>.</span><span style="color:#bf616a;">mkOption </span><span>{
+</span><span>                    </span><span style="color:#d08770;">type </span><span>= </span><span style="color:#bf616a;">lib</span><span>.</span><span style="color:#bf616a;">types</span><span>.</span><span style="color:#bf616a;">listOf lib</span><span>.</span><span style="color:#bf616a;">types</span><span>.</span><span style="color:#bf616a;">str</span><span>;
+</span><span>                    </span><span style="color:#d08770;">description </span><span>= &quot;</span><span style="color:#a3be8c;">Monitors that shows the wallpaper</span><span>&quot;;
+</span><span>                  };
+</span><span>                };
+</span><span>              };
+</span><span>            </span><span style="color:#b48ead;">in
+</span><span>            </span><span style="color:#bf616a;">lib</span><span>.</span><span style="color:#bf616a;">mkOption </span><span>{
+</span><span>              </span><span style="color:#d08770;">description </span><span>= &quot;</span><span style="color:#a3be8c;">Monitor / wallpaper mapping</span><span>&quot;;
+</span><span>              </span><span style="color:#d08770;">type </span><span>= </span><span style="color:#bf616a;">lib</span><span>.</span><span style="color:#bf616a;">types</span><span>.</span><span style="color:#bf616a;">attrsOf </span><span>(</span><span style="color:#bf616a;">lib</span><span>.</span><span style="color:#bf616a;">types</span><span>.</span><span style="color:#bf616a;">listOf lib</span><span>.</span><span style="color:#bf616a;">types</span><span>.</span><span style="color:#bf616a;">str</span><span>);
+</span><span>            };
+</span><span>          </span><span style="color:#d08770;">timerConfig </span><span>= </span><span style="color:#bf616a;">lib</span><span>.</span><span style="color:#bf616a;">mkOption </span><span>{
+</span><span>            </span><span style="color:#d08770;">description </span><span>= &quot;</span><span style="color:#a3be8c;">Timer to update the wallpapers</span><span>&quot;;
+</span><span>            </span><span style="color:#d08770;">type </span><span>= </span><span style="color:#bf616a;">lib</span><span>.</span><span style="color:#bf616a;">types</span><span>.</span><span style="color:#bf616a;">attrs</span><span>;
+</span><span>            </span><span style="color:#d08770;">default </span><span>= {
+</span><span>              </span><span style="color:#d08770;">OnBootSec </span><span>= &quot;</span><span style="color:#a3be8c;">5min</span><span>&quot;;
+</span><span>              </span><span style="color:#d08770;">OnUnitActiveSec </span><span>= &quot;</span><span style="color:#a3be8c;">2h</span><span>&quot;;
+</span><span>              </span><span style="color:#d08770;">Persistent </span><span>= </span><span style="color:#d08770;">true</span><span>;
+</span><span>            };
+</span><span>          };
+</span><span>        };
+</span><span>      };
+</span><span>      </span><span style="color:#65737e;"># Other configs ...
+</span><span>    };
+</span><span>  };
+</span><span>  </span><span style="color:#65737e;">#
+</span><span>  </span><span style="color:#65737e;"># Here is how it gets configued
+</span><span>  </span><span style="color:#65737e;">#
+</span><span>  </span><span style="color:#d08770;">config </span><span>= </span><span style="color:#bf616a;">lib</span><span>.</span><span style="color:#bf616a;">mkIf config</span><span>.</span><span style="color:#bf616a;">mods</span><span>.</span><span style="color:#bf616a;">hyprland</span><span>.</span><span style="color:#bf616a;">enable </span><span>{
+</span><span>      </span><span style="color:#65737e;"># Hyprland jibberish ...
+</span><span>      </span><span style="color:#d08770;">services</span><span>.</span><span style="color:#d08770;">hyprpaper </span><span>=
+</span><span>        </span><span style="color:#b48ead;">let
+</span><span>          </span><span style="color:#d08770;">randomWallpapers </span><span>= </span><span style="color:#bf616a;">config</span><span>.</span><span style="color:#bf616a;">mods</span><span>.</span><span style="color:#bf616a;">hyprland</span><span>.</span><span style="color:#bf616a;">hyprpaper</span><span>.</span><span style="color:#bf616a;">randomWallpapers</span><span>;
+</span><span>          </span><span style="color:#d08770;">preloads </span><span>=
+</span><span>            </span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">randomWallpapers</span><span>.</span><span style="color:#bf616a;">enable </span><span style="color:#b48ead;">then </span><span style="color:#65737e;"># These two ifs are there so support static wallpapers as well
+</span><span>              </span><span style="color:#bf616a;">lib</span><span>.</span><span style="color:#bf616a;">mapAttrsToList </span><span>(name: value: </span><span style="color:#bf616a;">name</span><span>) </span><span style="color:#bf616a;">randomWallpapers</span><span>.</span><span style="color:#bf616a;">mapping
+</span><span>            </span><span style="color:#b48ead;">else
+</span><span>              </span><span style="color:#bf616a;">config</span><span>.</span><span style="color:#bf616a;">mods</span><span>.</span><span style="color:#bf616a;">hyprland</span><span>.</span><span style="color:#bf616a;">wallpapers</span><span>;
+</span><span>
+</span><span>          </span><span style="color:#d08770;">wallpapers </span><span>=
+</span><span>            </span><span style="color:#b48ead;">if </span><span style="color:#bf616a;">randomWallpapers</span><span>.</span><span style="color:#bf616a;">enable </span><span style="color:#b48ead;">then
+</span><span>              </span><span style="color:#bf616a;">lib</span><span>.</span><span style="color:#bf616a;">concatLists </span><span>(
+</span><span>                </span><span style="color:#bf616a;">lib</span><span>.</span><span style="color:#bf616a;">mapAttrsToList </span><span>(
+</span><span>                  wallpaper: monitors: </span><span style="color:#96b5b4;">map </span><span>(monitor: &quot;</span><span style="font-style:italic;color:#ab7967;">${</span><span style="font-style:italic;color:#bf616a;">monitor</span><span style="font-style:italic;color:#ab7967;">}</span><span style="color:#a3be8c;">,</span><span style="font-style:italic;color:#ab7967;">${</span><span style="font-style:italic;color:#bf616a;">wallpaper</span><span style="font-style:italic;color:#ab7967;">}</span><span>&quot;) </span><span style="color:#bf616a;">monitors
+</span><span>                ) </span><span style="color:#bf616a;">randomWallpapers</span><span>.</span><span style="color:#bf616a;">mapping
+</span><span>              )
+</span><span>            </span><span style="color:#b48ead;">else
+</span><span>              </span><span style="color:#bf616a;">config</span><span>.</span><span style="color:#bf616a;">mods</span><span>.</span><span style="color:#bf616a;">hyprland</span><span>.</span><span style="color:#bf616a;">wallpapers</span><span>;
+</span><span>        </span><span style="color:#b48ead;">in
+</span><span>        {
+</span><span>          </span><span style="color:#d08770;">enable </span><span>= </span><span style="color:#d08770;">true</span><span>;
+</span><span>          </span><span style="color:#d08770;">settings </span><span>= </span><span style="color:#96b5b4;">import </span><span style="color:#a3be8c;">./hyprpaper.nix </span><span>{
+</span><span>            </span><span style="color:#d08770;">preloads </span><span>= </span><span style="color:#bf616a;">preloads</span><span>;
+</span><span>            </span><span style="color:#d08770;">wallpapers </span><span>= </span><span style="color:#bf616a;">wallpapers</span><span>;
+</span><span>          };
+</span><span>        };
+</span><span>      </span><span style="color:#65737e;"># Even more boring stuff ...
+</span><span>    };
+</span><span>    </span><span style="color:#65737e;">#
+</span><span>    </span><span style="color:#65737e;"># Part 1; The Service, the bit that does the work.
+</span><span>    </span><span style="color:#65737e;"># 
+</span><span>    </span><span style="color:#d08770;">systemd</span><span>.</span><span style="color:#d08770;">user</span><span>.</span><span style="color:#d08770;">services</span><span>.</span><span style="color:#d08770;">switch-wallpapers </span><span>=
+</span><span>      </span><span style="color:#bf616a;">lib</span><span>.</span><span style="color:#bf616a;">mkIf config</span><span>.</span><span style="color:#bf616a;">mods</span><span>.</span><span style="color:#bf616a;">hyprland</span><span>.</span><span style="color:#bf616a;">hyprpaper</span><span>.</span><span style="color:#bf616a;">randomWallpapers</span><span>.</span><span style="color:#bf616a;">enable
+</span><span>        {
+</span><span>          </span><span style="color:#d08770;">description </span><span>= &quot;</span><span style="color:#a3be8c;">Update wallpaper</span><span>&quot;;
+</span><span>          </span><span style="color:#d08770;">serviceConfig </span><span>=
+</span><span>            </span><span style="color:#b48ead;">let
+</span><span>              </span><span style="color:#d08770;">localScript </span><span>= </span><span style="color:#bf616a;">pkgs</span><span>.</span><span style="color:#bf616a;">writeShellScript </span><span>&quot;</span><span style="color:#a3be8c;">change-wallpaper</span><span>&quot; (</span><span style="color:#d08770;">builtins</span><span>.</span><span style="color:#bf616a;">readFile </span><span style="color:#a3be8c;">./pull-wallpaper.sh</span><span>);
+</span><span>              </span><span style="color:#d08770;">scriptBody </span><span>= </span><span style="color:#d08770;">builtins</span><span>.</span><span style="color:#bf616a;">concatStringsSep </span><span>&quot;</span><span style="color:#96b5b4;">\n</span><span>&quot; (
+</span><span>                </span><span style="color:#bf616a;">lib</span><span>.</span><span style="color:#bf616a;">concatLists </span><span>(
+</span><span>                  </span><span style="color:#bf616a;">lib</span><span>.</span><span style="color:#bf616a;">mapAttrsToList </span><span>(wallpaper: monitors: [
+</span><span>                    &quot;</span><span style="font-style:italic;color:#ab7967;">${</span><span style="font-style:italic;color:#bf616a;">localScript</span><span style="font-style:italic;color:#ab7967;">} </span><span style="color:#96b5b4;">\&quot;</span><span style="font-style:italic;color:#ab7967;">${</span><span style="font-style:italic;color:#bf616a;">config</span><span style="font-style:italic;color:#c0c5ce;">.</span><span style="font-style:italic;color:#bf616a;">mods</span><span style="font-style:italic;color:#c0c5ce;">.</span><span style="font-style:italic;color:#bf616a;">hyprland</span><span style="font-style:italic;color:#c0c5ce;">.</span><span style="font-style:italic;color:#bf616a;">hyprpaper</span><span style="font-style:italic;color:#c0c5ce;">.</span><span style="font-style:italic;color:#bf616a;">randomWallpapers</span><span style="font-style:italic;color:#c0c5ce;">.</span><span style="font-style:italic;color:#bf616a;">query</span><span style="font-style:italic;color:#ab7967;">}</span><span style="color:#96b5b4;">\&quot; \&quot;</span><span style="font-style:italic;color:#ab7967;">${</span><span style="font-style:italic;color:#bf616a;">wallpaper</span><span style="font-style:italic;color:#ab7967;">}</span><span style="color:#96b5b4;">\&quot;</span><span>&quot;
+</span><span>                  ]) </span><span style="color:#bf616a;">config</span><span>.</span><span style="color:#bf616a;">mods</span><span>.</span><span style="color:#bf616a;">hyprland</span><span>.</span><span style="color:#bf616a;">hyprpaper</span><span>.</span><span style="color:#bf616a;">randomWallpapers</span><span>.</span><span style="color:#bf616a;">mapping
+</span><span>                )
+</span><span>              );
+</span><span>              </span><span style="color:#d08770;">script </span><span>= </span><span style="color:#bf616a;">pkgs</span><span>.</span><span style="color:#bf616a;">writeShellApplication </span><span>{
+</span><span>                </span><span style="color:#d08770;">name </span><span>= &quot;</span><span style="color:#a3be8c;">change-wallpapers</span><span>&quot;;
+</span><span>                </span><span style="color:#d08770;">runtimeInputs </span><span>= [
+</span><span>                  </span><span style="color:#bf616a;">pkgs</span><span>.</span><span style="color:#bf616a;">curl
+</span><span>                  </span><span style="color:#bf616a;">pkgs</span><span>.</span><span style="color:#bf616a;">jq
+</span><span>                ];
+</span><span>                </span><span style="color:#d08770;">text </span><span>= &#39;&#39;
+</span><span style="color:#a3be8c;">                  #!/usr/bin/env sh
+</span><span style="color:#a3be8c;">                  </span><span style="font-style:italic;color:#ab7967;">${</span><span style="font-style:italic;color:#bf616a;">scriptBody</span><span style="font-style:italic;color:#ab7967;">}
+</span><span style="color:#a3be8c;">
+</span><span style="color:#a3be8c;">                  systemctl restart hyprpaper --user
+</span><span style="color:#a3be8c;">                </span><span>&#39;&#39;;
+</span><span>              };
+</span><span>            </span><span style="color:#b48ead;">in
+</span><span>            {
+</span><span>              </span><span style="color:#d08770;">Type </span><span>= &quot;</span><span style="color:#a3be8c;">oneshot</span><span>&quot;;
+</span><span>              </span><span style="color:#d08770;">ExecStart </span><span>= &quot;</span><span style="font-style:italic;color:#ab7967;">${</span><span style="font-style:italic;color:#bf616a;">script</span><span style="font-style:italic;color:#ab7967;">}</span><span style="color:#a3be8c;">/bin/change-wallpapers</span><span>&quot;;
+</span><span>            };
+</span><span>        };
+</span><span>
+</span><span>    </span><span style="color:#65737e;">#
+</span><span>    </span><span style="color:#65737e;"># Part 2; The Timer, the bit that calls the service to actually do the work
+</span><span>    </span><span style="color:#65737e;">#
+</span><span>    </span><span style="color:#d08770;">systemd</span><span>.</span><span style="color:#d08770;">user</span><span>.</span><span style="color:#d08770;">timers</span><span>.</span><span style="color:#d08770;">switch-wallpapers </span><span>=
+</span><span>      </span><span style="color:#bf616a;">lib</span><span>.</span><span style="color:#bf616a;">mkIf config</span><span>.</span><span style="color:#bf616a;">mods</span><span>.</span><span style="color:#bf616a;">hyprland</span><span>.</span><span style="color:#bf616a;">hyprpaper</span><span>.</span><span style="color:#bf616a;">randomWallpapers</span><span>.</span><span style="color:#bf616a;">enable
+</span><span>        {
+</span><span>          </span><span style="color:#d08770;">description </span><span>= &quot;</span><span style="color:#a3be8c;">Update wallpapers automatically</span><span>&quot;;
+</span><span>
+</span><span>          </span><span style="color:#d08770;">timerConfig </span><span>= </span><span style="color:#bf616a;">config</span><span>.</span><span style="color:#bf616a;">mods</span><span>.</span><span style="color:#bf616a;">hyprland</span><span>.</span><span style="color:#bf616a;">hyprpaper</span><span>.</span><span style="color:#bf616a;">randomWallpapers</span><span>.</span><span style="color:#bf616a;">timerConfig</span><span>;
+</span><span>
+</span><span>          </span><span style="color:#d08770;">wantedBy </span><span>= [ &quot;</span><span style="color:#a3be8c;">timers.target</span><span>&quot; ];
+</span><span>        };
+</span><span>  }</span><span style="background-color:#bf616a;color:#2b303b;">;</span><span>
+</span><span style="background-color:#bf616a;color:#2b303b;">}</span><span>
+</span></code></pre>
+<p><a href="https://github.com/nicklayb/nixos-config/blob/25.11/modules/desktop_environment/hyprland/default.nix">source</a></p>
+<p>What I like about systemd timers/services over cron is the observability you get that is built in and it's easier to manage. There's a lot of handful command to help you debug it:</p>
+<ul>
+<li><code>systemctl --user status switch-wallpapers.service</code>: Gets the status of the service</li>
+<li><code>systemctl --user cat switch-wallpapers.service</code>: Opens the service file, so you can see how its sources look and if you made any typos (like I did)</li>
+<li><code>systemctl --user start switch-wallpapers.service</code>: Runs the command ad-hoc</li>
+</ul>
+<p>(You can replace <code>switch-wallpapers.service</code> for <code>switch-wallpapers.timer</code>, to do the same on the timer).</p>
+<h3 id="3-enabling-it">3. Enabling it</h3>
+<p>In order for it to work, you gotta enable it (no way?). This is done through the three options outlined above: <code>enable</code>, <code>query</code> and <code>mapping</code>:</p>
+<ul>
+<li><code>enable</code>: Enable random wallpapers, otherwise the module will try to use the static wallpapers options</li>
+<li><code>query</code>: The query you wanna call Unsplash with</li>
+<li><code>mapping</code>: How do you map your monitors to individual wallpaper files.</li>
+</ul>
+<p>Example of how it's enabled on my T480s</p>
+<pre data-lang="nix" style="background-color:#2b303b;color:#c0c5ce;" class="language-nix "><code class="language-nix" data-lang="nix"><span style="color:#bf616a;">randomWallpapers </span><span style="background-color:#bf616a;color:#2b303b;">=</span><span> {
+</span><span>  </span><span style="color:#d08770;">enable </span><span>= </span><span style="color:#d08770;">true</span><span>;
+</span><span>  </span><span style="color:#d08770;">query </span><span>= &quot;</span><span style="color:#a3be8c;">mountains</span><span>&quot;;
+</span><span>  </span><span style="color:#d08770;">mapping </span><span>= {
+</span><span>    &quot;</span><span style="color:#a3be8c;">/home/</span><span style="font-style:italic;color:#ab7967;">${</span><span style="font-style:italic;color:#bf616a;">username</span><span style="font-style:italic;color:#ab7967;">}</span><span style="color:#a3be8c;">/.background</span><span>&quot; = [ &quot;</span><span style="color:#a3be8c;">eDP-1</span><span>&quot; ];
+</span><span>    &quot;</span><span style="color:#a3be8c;">/home/</span><span style="font-style:italic;color:#ab7967;">${</span><span style="font-style:italic;color:#bf616a;">username</span><span style="font-style:italic;color:#ab7967;">}</span><span style="color:#a3be8c;">/.background-external</span><span>&quot; = [
+</span><span>      &quot;</span><span style="color:#a3be8c;">HDMI-A-2</span><span>&quot;
+</span><span>      &quot;</span><span style="color:#a3be8c;">DP-1</span><span>&quot;
+</span><span>      &quot;</span><span style="color:#a3be8c;">DP-3</span><span>&quot;
+</span><span>      &quot;</span><span style="color:#a3be8c;">DP-4</span><span>&quot;
+</span><span>    ];
+</span><span>  };
+</span><span>}</span><span style="background-color:#bf616a;color:#2b303b;">;</span><span>
+</span></code></pre>
+<p><a href="https://github.com/nicklayb/nixos-config/blob/25.11/hosts/t480s/configuration.nix">source</a></p>
+<p>So my logic here is will always use this laptop with either just screen, just monitor, or both, but never more. So I mapped one random wallpaper to my laptop screen, and one to my external monitor, whatever that is or however it's connected.</p>
+<p>I'm querying mountains wallpaper, I love mountains.</p>
+<p>It should be simple as that.</p>
+<h2 id="what-s-next">What's next?</h2>
+<p>I could certainly do a few improvemments, namely:</p>
+<ul>
+<li>Reorganize the randome wallpaper to its own module, it's already getting quite ugly, so that couldn't hurt.</li>
+<li>Try to find a way to have a transition between change, now it shows the default Hyprland in between.</li>
+<li>Improve the overall config. The mapping can still be used as one source of truth for static wallpaper as well. Maybe the <code>randomWallpapers</code> part could just be the enable and query.</li>
+</ul>
+<p>That's it. Thanks for reading.</p>
+
+  </div>
+</div>
+
+
+    </section>
+    <footer class="py-4 desktop:py-6 bg-slate-200 dark:bg-slate-900 mt-4 desktop:mt-6">
+      <div class="container flex flex-col desktop:flex-row justify-evenly">
+        <div class="flex flex-initial justify-evenly desktop:justify-start desktop:items-center flex-row desktop:flex-col">
+          
+          <a class="footer-nav-item " href="&#x2F;">Home</a>
+          
+          <a class="footer-nav-item " href="&#x2F;blog&#x2F;">Blog</a>
+          
+          <a class="footer-nav-item " href="&#x2F;talks&#x2F;">Talks</a>
+          
+          <a class="footer-nav-item " href="&#x2F;sandbox&#x2F;">Sandbox</a>
+          
+        </div>
+        <div class="flex flex-initial justify-evenly desktop:justify-start items-center text-xs desktop:text-sm flex-row desktop:flex-col">
+          
+          <a class="footer-nav-item " href="https:&#x2F;&#x2F;github.com&#x2F;nicklayb">GitHub</a>
+          
+          <a class="footer-nav-item" href="mailto:nicolas@nboisvert.com">nicolas@nboisvert.com</a>
+          <span class="hidden desktop:block footer-nav-item">Shawinigan, QC, Canada</span>
+          <span class="hidden desktop:block footer-nav-item">Coding with ❤️</span>
+        </div>
+        <div class="flex flex-initial justify-evenly desktop:justify-start desktop:items-center text-xs desktop:text-sm flex-row desktop:flex-col">
+          <span class="footer-nav-item">Built with</span>
+          <a class="footer-nav-item" href="https://www.getzola.org/">Zola</a>
+          <a class="footer-nav-item" href="https://tailwindcss.com/">TailwindCSS</a>
+          <a class="footer-nav-item" href="https://github.com/nicklayb/zola-nboisvert.com">Source</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script type="text/javascript">
+    function toggleMenu() {
+      const hamburger = document.querySelector('input[name="hamburger"]')
+      const xElement = document.querySelector(".cross")
+      const hamburgerElement = document.querySelector(".hamburger")
+      hamburger.checked = !hamburger.checked
+
+      if (hamburger.checked) {
+        xElement.classList.remove("hidden")
+        hamburgerElement.classList.add("hidden")
+      } else {
+        xElement.classList.add("hidden")
+        hamburgerElement.classList.remove("hidden")
+      }
+    }
+  </script>
+</html>

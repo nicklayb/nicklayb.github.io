@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Nicolas Boisvert</title>
+    <link rel="stylesheet" href="https://nboisvert.com/styles/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-81B4LEX9Y8"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-81B4LEX9Y8');
+    </script>
+    
+  </head>
+
+  <body class="h-screen flex flex-col">
+    <nav class="container flex flex-initial mb-4 text-lg">
+      <div class="flex flex-1 flex-col desktop:flex-row ">
+        <div class="flex justify-between">
+          <span class="py-4 px-4 desktop:pl-0 font-bold dark:text-slate-300">Nicolas Boisvert</span>
+          <label for="hamburger" tabindex="0" class="flex desktop:hidden px-4 items-center cursor-pointer dark:text-slate-300" onclick="toggleMenu()">
+            <span class="hamburger">
+              <svg width="20px" height="20px" viewBox="0 0 12 12" enable-background="new 0 0 12 12" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g> <rect fill="currentColor" height="1" width="11" x="0.5" y="5.5"/> <rect fill="currentColor" height="1" width="11" x="0.5" y="2.5"/> <rect fill="currentColor" height="1" width="11" x="0.5" y="8.5"/></g></svg>
+            </span>
+            <span class="cross hidden">
+              <svg fill="currentColor" height="16px" width="16px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 460.775 460.775" xml:space="preserve"> <path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55 c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55 c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505 c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55 l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719 c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"/> </svg>
+            </span>
+          </label>
+        </div>
+        <input class="hidden" type="checkbox" name="hamburger">
+        <div class="flex flex-1 flex-col desktop:flex-row desktop:justify-between shadow-lg desktop:shadow-none" id="menu">
+          <div class="flex flex-initial flex-col desktop:flex-row">
+            
+            <a class="nav-item " href="&#x2F;">Home</a>
+            
+            <a class="nav-item " href="&#x2F;blog&#x2F;">Blog</a>
+            
+            <a class="nav-item " href="&#x2F;talks&#x2F;">Talks</a>
+            
+            <a class="nav-item active" href="&#x2F;sandbox&#x2F;">Sandbox</a>
+            
+          </div>
+          <div class="flex-initial flex-col desktop:flex-row">
+            
+              <a class="nav-item" href="https:&#x2F;&#x2F;github.com&#x2F;nicklayb">GitHub</a>
+            
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="flex flex-1 container px-2 desktop:px-0 dark:text-slate-200">
+      
+
+<div class="w-full">
+  <h1 class="text-4xl font-extrabold mb-6">Sandbox</h1>
+
+  <p class="text-center py-2 text-slate-400">Various open projects and experimentation I came up with.</p>
+
+  <div class="w-full mt-4">
+    
+    <div class="flex mt-8 p-2 desktop:p-4 bg-slate-50 dark:bg-slate-900 rounded-md shadow-md">
+      <div class="flex-initial max-w-80 hidden desktop:block">
+        <img class="border-2 border-purple-800 rounded-md drop-shadow-md" src="poisson.png">
+      </div>
+      <div class="flex flex-col flex-1 desktop:pl-4">
+        <div class="flex w-full justify-between flex-col desktop:flex-row">
+          <h3 class="flex-initial text-2xl desktop:text-3xl mb-2">Poisson</h3>
+          <div class="flex-initial">
+            
+              <span class="tag">elm</span>
+            
+              <span class="tag">frequency</span>
+            
+              <span class="tag">counter</span>
+            
+          </div>
+        </div>
+        <div class="flex-initial w-full desktop:max-w-80 block desktop:hidden my-4">
+          <img class="border-2 border-purple-800 rounded-md drop-shadow-md" src="poisson.png">
+        </div>
+        <div class="flex-1">
+          Frequency counter made for my girlfriend to monitor the time between her contractions when she starts her labor. Since we heard we should head to the hospital once the contractions are every 5 minutes, I figured a simple app could help. Nope. It has nothing related to fishes like the name &quot;poisson&quot; implies.
+
+        </div>
+        <div class="text-right pb-4">
+          
+            <a class="text-purple-800 dark:text-purple-500 font-semibold px-4" href="https:&#x2F;&#x2F;nicklayb.github.io&#x2F;poisson">Demo</a>
+          
+            <a class="text-purple-800 dark:text-purple-500 font-semibold px-4" href="https:&#x2F;&#x2F;github.com&#x2F;nicklayb&#x2F;poisson">Source</a>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="flex mt-8 p-2 desktop:p-4 bg-slate-50 dark:bg-slate-900 rounded-md shadow-md">
+      <div class="flex-initial max-w-80 hidden desktop:block">
+        <img class="border-2 border-purple-800 rounded-md drop-shadow-md" src="chord_sheet.png">
+      </div>
+      <div class="flex flex-col flex-1 desktop:pl-4">
+        <div class="flex w-full justify-between flex-col desktop:flex-row">
+          <h3 class="flex-initial text-2xl desktop:text-3xl mb-2">Chord Sheet</h3>
+          <div class="flex-initial">
+            
+              <span class="tag">elm</span>
+            
+              <span class="tag">chord</span>
+            
+              <span class="tag">music</span>
+            
+              <span class="tag">sheet</span>
+            
+          </div>
+        </div>
+        <div class="flex-initial w-full desktop:max-w-80 block desktop:hidden my-4">
+          <img class="border-2 border-purple-800 rounded-md drop-shadow-md" src="chord_sheet.png">
+        </div>
+        <div class="flex-1">
+          I looked around the web to find a piano chord sheet that had all the keys and most common chords but couldn&#x27;t find anything that fitted a A4 type paper. All I could find was poster (and quite expensive one). So I figure I&#x27;d get a shot at creating a generator that allows me to put what I want and how I want it. Interesting bit of the generator is that the chords are not hardcoded, they are generated according to music theory (at least my understanding of it).
+
+        </div>
+        <div class="text-right pb-4">
+          
+            <a class="text-purple-800 dark:text-purple-500 font-semibold px-4" href="https:&#x2F;&#x2F;nicklayb.github.io&#x2F;chord_sheet">Demo</a>
+          
+            <a class="text-purple-800 dark:text-purple-500 font-semibold px-4" href="https:&#x2F;&#x2F;github.com&#x2F;nicklayb&#x2F;chord_sheet">Source</a>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="flex mt-8 p-2 desktop:p-4 bg-slate-50 dark:bg-slate-900 rounded-md shadow-md">
+      <div class="flex-initial max-w-80 hidden desktop:block">
+        <img class="border-2 border-purple-800 rounded-md drop-shadow-md" src="unox.gif">
+      </div>
+      <div class="flex flex-col flex-1 desktop:pl-4">
+        <div class="flex w-full justify-between flex-col desktop:flex-row">
+          <h3 class="flex-initial text-2xl desktop:text-3xl mb-2">Unox</h3>
+          <div class="flex-initial">
+            
+              <span class="tag">elixir</span>
+            
+              <span class="tag">phoenix</span>
+            
+              <span class="tag">liveview</span>
+            
+              <span class="tag">process</span>
+            
+              <span class="tag">uno</span>
+            
+          </div>
+        </div>
+        <div class="flex-initial w-full desktop:max-w-80 block desktop:hidden my-4">
+          <img class="border-2 border-purple-800 rounded-md drop-shadow-md" src="unox.gif">
+        </div>
+        <div class="flex-1">
+          Unox is a an implementation of the popular friendship-breaking game called UNO. The purpose of this project is to make my entry to the PhoenixPhrenzy challenge where we had to build application using Phoenix LiveView. The game is persistanceless, there is no database or file attached as persistency, everything is in the ram. Erlang makes it so easy to create processes that it became just an obvious choice. The only Javascript in the app is Phoenix&#x27;s&#x2F;LiveView Socket connection and the Desktop notification service. 
+
+        </div>
+        <div class="text-right pb-4">
+          
+            <a class="text-purple-800 dark:text-purple-500 font-semibold px-4" href="https:&#x2F;&#x2F;github.com&#x2F;nicklayb&#x2F;unox">Source</a>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="flex mt-8 p-2 desktop:p-4 bg-slate-50 dark:bg-slate-900 rounded-md shadow-md">
+      <div class="flex-initial max-w-80 hidden desktop:block">
+        <img class="border-2 border-purple-800 rounded-md drop-shadow-md" src="kub.png">
+      </div>
+      <div class="flex flex-col flex-1 desktop:pl-4">
+        <div class="flex w-full justify-between flex-col desktop:flex-row">
+          <h3 class="flex-initial text-2xl desktop:text-3xl mb-2">K U B</h3>
+          <div class="flex-initial">
+            
+              <span class="tag">elm</span>
+            
+              <span class="tag">game</span>
+            
+          </div>
+        </div>
+        <div class="flex-initial w-full desktop:max-w-80 block desktop:hidden my-4">
+          <img class="border-2 border-purple-800 rounded-md drop-shadow-md" src="kub.png">
+        </div>
+        <div class="flex-1">
+          K U B is a block collapsing game. The goal is to delete all the blocks by removing regions of two blocks or more. You have basics stats about the remaining blocks by colors and also a percent of the cleared block. Before starting the game, a seet value needs to be input (default to 0). Re-using the same seed will generate the same game. Note: The design is not completely mobile-proof, playing it on a computer might give a better experience.
+
+        </div>
+        <div class="text-right pb-4">
+          
+            <a class="text-purple-800 dark:text-purple-500 font-semibold px-4" href="https:&#x2F;&#x2F;nicklayb.github.io&#x2F;kub">Demo</a>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="flex mt-8 p-2 desktop:p-4 bg-slate-50 dark:bg-slate-900 rounded-md shadow-md">
+      <div class="flex-initial max-w-80 hidden desktop:block">
+        <img class="border-2 border-purple-800 rounded-md drop-shadow-md" src="labyrelm.png">
+      </div>
+      <div class="flex flex-col flex-1 desktop:pl-4">
+        <div class="flex w-full justify-between flex-col desktop:flex-row">
+          <h3 class="flex-initial text-2xl desktop:text-3xl mb-2">Labyrelm</h3>
+          <div class="flex-initial">
+            
+              <span class="tag">elm</span>
+            
+              <span class="tag">game</span>
+            
+              <span class="tag">labyrinth</span>
+            
+              <span class="tag">prim</span>
+            
+          </div>
+        </div>
+        <div class="flex-initial w-full desktop:max-w-80 block desktop:hidden my-4">
+          <img class="border-2 border-purple-800 rounded-md drop-shadow-md" src="labyrelm.png">
+        </div>
+        <div class="flex-1">
+          Labyrelm is a labyrinth resolving game. The goal is to find the exit of the maze by browsing the paths. The exit is always at the bottom of the maze. It uses the Prim algorithm to generate the maze, which is a greedy algorithm. So generating a maze bigger that 30x30 might take a while. On the opening you will be asked for a size and a seed. Using the same seed twice will generate the exact same game. 
+
+        </div>
+        <div class="text-right pb-4">
+          
+            <a class="text-purple-800 dark:text-purple-500 font-semibold px-4" href="https:&#x2F;&#x2F;nicklayb.github.io&#x2F;labyrelm">Demo</a>
+          
+            <a class="text-purple-800 dark:text-purple-500 font-semibold px-4" href="https:&#x2F;&#x2F;github.com&#x2F;nicklayb&#x2F;labyrelm">Source</a>
+          
+        </div>
+      </div>
+    </div>
+    
+    <div class="flex mt-8 p-2 desktop:p-4 bg-slate-50 dark:bg-slate-900 rounded-md shadow-md">
+      <div class="flex-initial max-w-80 hidden desktop:block">
+        <img class="border-2 border-purple-800 rounded-md drop-shadow-md" src="gol.png">
+      </div>
+      <div class="flex flex-col flex-1 desktop:pl-4">
+        <div class="flex w-full justify-between flex-col desktop:flex-row">
+          <h3 class="flex-initial text-2xl desktop:text-3xl mb-2">Gelm of life</h3>
+          <div class="flex-initial">
+            
+              <span class="tag">elm</span>
+            
+              <span class="tag">game-of-life</span>
+            
+              <span class="tag">cellular-automaton</span>
+            
+          </div>
+        </div>
+        <div class="flex-initial w-full desktop:max-w-80 block desktop:hidden my-4">
+          <img class="border-2 border-purple-800 rounded-md drop-shadow-md" src="gol.png">
+        </div>
+        <div class="flex-1">
+          Gelm of life is and Elm implementation of popular Conway&#x27;s Game of Life. This is not really a &quot;game&quot; it is a cellular automaton. I always loved implementing this &quot;game&quot; in every language I learn to get more familiar with the language. On the opening you will be asked for a size and a seed. Using the same seed twice will generate the exact same game. 
+
+        </div>
+        <div class="text-right pb-4">
+          
+            <a class="text-purple-800 dark:text-purple-500 font-semibold px-4" href="https:&#x2F;&#x2F;nicklayb.github.io&#x2F;game-of-life">Demo</a>
+          
+            <a class="text-purple-800 dark:text-purple-500 font-semibold px-4" href="https:&#x2F;&#x2F;github.com&#x2F;nicklayb&#x2F;game-of-life">Source</a>
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+    </section>
+    <footer class="py-4 desktop:py-6 bg-slate-200 dark:bg-slate-900 mt-4 desktop:mt-6">
+      <div class="container flex flex-col desktop:flex-row justify-evenly">
+        <div class="flex flex-initial justify-evenly desktop:justify-start desktop:items-center flex-row desktop:flex-col">
+          
+          <a class="footer-nav-item " href="&#x2F;">Home</a>
+          
+          <a class="footer-nav-item " href="&#x2F;blog&#x2F;">Blog</a>
+          
+          <a class="footer-nav-item " href="&#x2F;talks&#x2F;">Talks</a>
+          
+          <a class="footer-nav-item border-b-purple-800" href="&#x2F;sandbox&#x2F;">Sandbox</a>
+          
+        </div>
+        <div class="flex flex-initial justify-evenly desktop:justify-start items-center text-xs desktop:text-sm flex-row desktop:flex-col">
+          
+          <a class="footer-nav-item " href="https:&#x2F;&#x2F;github.com&#x2F;nicklayb">GitHub</a>
+          
+          <a class="footer-nav-item" href="mailto:nicolas@nboisvert.com">nicolas@nboisvert.com</a>
+          <span class="hidden desktop:block footer-nav-item">Shawinigan, QC, Canada</span>
+          <span class="hidden desktop:block footer-nav-item">Coding with ❤️</span>
+        </div>
+        <div class="flex flex-initial justify-evenly desktop:justify-start desktop:items-center text-xs desktop:text-sm flex-row desktop:flex-col">
+          <span class="footer-nav-item">Built with</span>
+          <a class="footer-nav-item" href="https://www.getzola.org/">Zola</a>
+          <a class="footer-nav-item" href="https://tailwindcss.com/">TailwindCSS</a>
+          <a class="footer-nav-item" href="https://github.com/nicklayb/zola-nboisvert.com">Source</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script type="text/javascript">
+    function toggleMenu() {
+      const hamburger = document.querySelector('input[name="hamburger"]')
+      const xElement = document.querySelector(".cross")
+      const hamburgerElement = document.querySelector(".hamburger")
+      hamburger.checked = !hamburger.checked
+
+      if (hamburger.checked) {
+        xElement.classList.remove("hidden")
+        hamburgerElement.classList.add("hidden")
+      } else {
+        xElement.classList.add("hidden")
+        hamburgerElement.classList.remove("hidden")
+      }
+    }
+  </script>
+</html>
